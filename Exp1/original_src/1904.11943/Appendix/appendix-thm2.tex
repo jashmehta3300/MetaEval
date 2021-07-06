@@ -1,0 +1,307 @@
+
+\section{Proof for Theorem~\ref{thm:SWALP}}\label{sec:thm4.3}
+
+\begin{customthm}{\ref{thm:SWALP}}
+Suppose that we run SWALP under the above conditions, with the parameters specified in Lemma~\ref{lemmaNewSingleIterBound}.
+Also, suppose that we first run a warm-up phase and start averaging at some point $w_0$ after enough iterations of low-precision SGD such that the bound of Lemma~\ref{lemmaNewSingleIterBound} is already guaranteed to apply for this and all subsequent iterates.
+Let $\bar{w}$ be the output of SWALP using cycle length $c$, and $\gamma = min(\alpha^2\mu^2c^2,1)$.
+The expected squared distance to the optimum of the output of SWALP is bounded by
+\begin{align*}
+% {\textstyle
+    \mathbb{E}[\|\bar{w} - w^*\|^2] \leq
+    \frac{5808 M^2G^2\delta^2 d}{\mu^4} + 
+    \frac{6 G^2 c}{\mu^2 T} +
+    \frac{528 \sqrt{d}\delta G^3 c^2}{\gamma\mu T^2}.
+% }
+\end{align*}
+\end{customthm}
+
+
+\begin{proof}
+Consider the case that $\bar{w}$ is output after $K$ averagings. Therefore, we could assume $cK \leq T < cK+c$, and $\bar{w}=\frac{1}{K}\sum_{t=0}^{K-1} w_{tc}$.
+From rearranging the SGD update step, we have
+\begin{align*}
+  w_t - w_{t+1}
+  &=
+  Q_{\delta}\left(\alpha \nabla \tilde f_t(w_t) \right) \\
+  &=
+  \alpha H (w_t - w^*)
+  +
+  \alpha \left(
+    \nabla f(w_t)
+    -
+    H (w_t - w^*)
+  \right)
+  +
+  Q_{\delta}\left(\alpha \nabla \tilde f_t(w_t) \right)
+  -
+  \alpha \nabla f(w_t)
+\end{align*}
+where we let $H$ denote $H = \nabla^2 f(w^*)$.
+For simplicity of the presentation, we let
+\begin{align*}
+    \phi_t &= \nabla f(w_t) - H ( w_t - w^*) \\
+    \psi_t &= Q_\delta(\alpha \nabla \tilde{f}_t(w_t)) - \alpha \nabla f(w_t) \\
+    \eta_t &= -\alpha \left(\nabla f(w_t) - H (w_t - w^*) \right)
+              - Q_{\delta}\left(\alpha \nabla \tilde f_t(w_t) \right)
+              + \alpha \nabla f(w_t) \\
+           &= \alpha \phi_t + \psi_t
+\end{align*}
+Then  we can re-arrange the terms as following:
+\begin{align*}
+    w_{t+1} &= w_t - \alpha H(w_t - w^*) - \eta_t \\
+    w_{t+1} - w^* &= (w_t - w^*) - \alpha H ( w_t - w^* ) - \eta_t \\
+                  &= (I - \alpha H) (w_t - w^*) - \eta_t \\
+    w_{t+c} - w^* &= (I - \alpha H)^c ( w_t - w^*) - \sum_{i=0}^{c-1} \eta_{t+i}(I-\alpha H)^{c-u-1} \\
+    w_t - w_{t+c} &= (I - (I - \alpha H)^c) ( w_t - w^*) + \sum_{i=0}^{c-1}(I - \alpha H)^{c-i-1}\eta_{t+i} \\
+    w_0 - w_{cK} &= \sum_{t=0}^{K-1}(I - (I-\alpha H)^c)(w_{tc} - w^*) + \sum_{t=0}^{K-1} \sum_{i=0}^{c-1} (I - \alpha H)^{c-i-1} \eta_{ct+i} \\
+    \frac{1}{K}(w_0 - w_{cK}) &= 
+        \frac{1}{K}\sum_{t=0}^{K-1}(I - (I-\alpha H)^c)(w_{tc} - w^*) + 
+        \frac{1}{K}\sum_{t=0}^{K-1} \sum_{i=0}^{c-1} (I - \alpha H)^{c-i-1} \eta_{ct+i} \\
+        &= 
+        (I - (I-\alpha H)^c) \frac{1}{K}\sum_{t=0}^{K-1}(w_{tc} - w^*) + 
+        \frac{1}{K}\sum_{t=0}^{K-1} \sum_{i=0}^{c-1} (I - \alpha H)^{c-i-1} \eta_{ct+i} \\
+\end{align*}
+We know $\bar{w} = \frac{1}{K}\sum_{t=0}^{K-1} w_{tc}$ and $cK \leq T < cK+c$. So $\frac{1}{K}\sum_{t=0}^{K-1}(w_{tc} - w^*) = \bar{w} - w^*$. 
+\begin{align*}
+\bar{w} - w^* &= (I - (I - \alpha H)^c)^{-1} \left[ 
+    \frac{1}{K}(w_0 - w_{cK}) + \frac{1}{K}\sum_{t=0}^{K-1}\sum_{i=0}^{c-1} (I-\alpha H)^{c-i-1} \eta_{ct+i}
+\right]
+\end{align*}
+
+Bounding the expected norm of $\bar{w} - w^*$, we get
+\begin{align*}
+    \Exv{\|\bar{w} - w^*\|} & \leq \frac{1}{K}\Exv{\left\|(I-(I - \alpha H)^c)^{-1} (w_0 - w_{cK})\right\|} \\
+                            & \quad + \frac{\alpha}{K} \Exv{\left\|\sum_{i=0}^{c-1} (I - (I-\alpha H)^c)^{-1} (I - \alpha H)^{c-i-1} \phi_{ct+i}\right\|} \\ 
+                            & \quad + \Exv{\left\|\frac{1}{K}\sum_{t=0}^{K-1}\sum_{i=0}^{c-1}(I - (I - \alpha H)^c)^{-1} (I - \alpha H )^{c-i-1} \psi_{ct+i}\right\|}
+\end{align*}
+Applying the inequality $(x+y+z)^2 \leq 3x^2+3y^2+3z^2$, we get
+\begin{align*}
+    \Exv{\|\bar{w} - w^*\|^2} & \leq \frac{3}{K^2}\Exv{\left\|(I-(I - \alpha H)^c)^{-1} (w_0 - w_{cK})\right\|^2} \\
+                            & \quad + 3 \alpha^2\left(\frac{1}{K} \Exv{\left\|\sum_{i=0}^{c-1} (I - (I-\alpha H)^c)^{-1} (I - \alpha H)^{c-i-1} \phi_{ct+i}\right\|}\right)^2 \\ 
+                            & \quad + 3\Exv{\left\|\frac{1}{K}\sum_{t=0}^{K-1}\sum_{i=0}^{c-1}(I - (I - \alpha H)^c)^{-1} (I - \alpha H )^{c-i-1} \psi_{ct+i}\right\|^2}
+\end{align*}
+We will now bound each of these three terms separately, starting with the first term:
+\begin{align*}
+    \frac{3}{K^2}\Exv{\left\| (I - (I - \alpha H)^c)^{-1} ( w_0 - w_{cK}) \right\|^2} 
+    & \leq \frac{3}{K^2}\left\| (I - (I - \alpha H)^c)^{-1}\right\|_2^2 \Exv{\|w_0 - w_{cK}\|^2}
+\end{align*}
+By the result of Lemma~\ref{lemmaNoiseBall}, and Jensen's inequality, we will have
+\begin{align*}
+    \Exv{\|w_t - w^*\|^2} \leq \Exv{\|w_t - w^*\|^4}^{\frac{1}{2}} \leq \frac{44G\delta \sqrt{d}}{\mu}
+\end{align*}
+for any fixed $t$ during the executation of the algorithm (after the warm-up period). It follows that
+\begin{align*}
+    \Exv{\|w_0 - w_K\|^2}] 
+    &\leq 2\Exv{\|w_K - w^*\|^2} + 2 \Exv{\|w_0 - w^*\|^2} \\
+    &\leq \frac{176 G \delta \sqrt{d}}{\mu \alpha^2 K^2} = \frac{176 G^3}{\mu \delta \sqrt{d} K^2}
+\end{align*}
+where the last line followed by substituting $\alpha = \sqrt{\frac{\delta^2 d}{G^2}}$ from Lemma~\ref{lemmaNoiseBall}.
+Since $H \succeq \mu I$, so $\|H\|_2 \geq \mu$. We have
+\begin{align*}
+    \|(I - (I - \alpha H)^c)^{-1}\|_2^2 \leq  (1 - (1 - \alpha \mu)^c)^{-2}
+\end{align*}
+Therefore, we get the following bound on the first term:
+\begin{align*}
+    \frac{3}{K^2}\Exv{\left\| (I - (I - \alpha H)^c)^{-1} ( w_0 - w_{cK}) \right\|^2} 
+    & \leq \frac{1}{K^2}(1-(1-\alpha \mu)^c)^{-2}\frac{176 G\delta \sqrt{d}}{\mu}
+\end{align*}
+Note that if c is really small (i.e. $\alpha \mu c << 1$), then
+\begin{align*} 
+    (1- (1- \alpha \mu)^c)^{-2} \leq \frac{1}{\alpha^2 \mu^2 c^2}
+\end{align*}
+If $c$ is large, then $(1-(1 - \alpha \mu)^c)^{-2} \rightarrow 1$, so we can bound it by 
+\begin{align*}
+    (1- (1- \alpha \mu)^c)^{-2} \leq \frac{1}{min(\alpha^2\mu^2c^2, 1)} = \frac{1}{\gamma}
+\end{align*}
+Therefore, the first term is then bounded by:
+\begin{align*}
+    \frac{3}{K^2}\Exv{\left\| (I - (I - \alpha H)^c)^{-1} ( w_0 - w_{cK}) \right\|^2} 
+    & \leq \frac{528 G \delta \sqrt{d}}{\gamma \mu K^2}
+\end{align*}
+
+Now we proceed to bound the second term:
+\begin{align*}
+    & 3 \alpha^2\left(\frac{1}{K} \Exv{\left\|\sum_{i=0}^{c-1} (I - (I-\alpha H)^c)^{-1} (I - \alpha H)^{c-i-1} \phi_{ct+i}\right\|}\right)^2 \\
+    &\quad \leq \frac{3\alpha^2}{K} \left( \sum_{t=0}^{K-1} \Exv{\left\|\sum_{i=0}^{c-1} (I - \alpha H)^{c-i-1} \phi_{ct+i}\right\|^2} \right) \left\| (I - (I - \alpha H)^c)^{-1} \right\|_2^2
+\end{align*}
+Analyzing the the expectation term, 
+\begin{align*}
+    & \Exv{\left\| \sum_{i=0}^{c-1} (I - \alpha H)^{c-i-1}\phi_{ct+i} \right\|^2} \\
+    & \quad = \left( \sum_{i=0}^{c-1} (1 - \alpha \mu )^{c-i-1} \right)^2 \Exv{\left\| \frac{1}{\sum_{i=0}^{c-1}(1-\alpha \mu)^{c-i-1}}\sum_{i=0}^{c-1} \frac{(1-\alpha\mu)^{c-i-1}}{(1-\alpha\mu)^{c-i-1}}(I - \alpha H)^{c-i-1}\phi_{ct+i} \right\|^2} \\
+    & \quad = \left( \sum_{i=0}^{c-1} (1 - \alpha \mu )^{c-i-1} \right)^2 
+    \Exv{\left\| 
+        \sum_{i=0}^{c-1} 
+            \frac{(1-\alpha\mu)^{c-i-1}}{\sum_{i=0}^{c-1}(1-\alpha \mu)^{c-i-1}}
+            \frac{(I - \alpha H)^{c-i-1}}{(1-\alpha\mu)^{c-i-1}}\phi_{ct+i} \right\|^2} \\
+     & \quad \leq \left( \sum_{i=0}^{c-1} (1 - \alpha \mu )^{c-i-1} \right)^2 
+        \sum_{i=0}^{c-1} \frac{(1-\alpha\mu)^{c-i-1}}{\sum_{i=0}^{c-1}(1-\alpha \mu)^{c-i-1}}
+        \Exv{\left\| 
+            \frac{(I - \alpha H)^{c-i-1}}{(1-\alpha\mu)^{c-i-1}}\phi_{ct+i} \right\|^2}
+        \quad (\text{Jensen's inequality}) \\
+    & \quad = \left( \sum_{i=0}^{c-1} (1 - \alpha \mu )^{c-i-1} \right)\sum_{i=0}^{c-1} (1 - \alpha \mu)^{c-i-1} \Exv{\left\|\frac{(I-\alpha H)^{c-i-1}}{(1-\alpha\mu)^{c-i-1}}\phi_{ct+i}\right\|^2} \\
+    & \quad \leq \left( \sum_{i=0}^{c-1} (1 - \alpha \mu )^{c-i-1} \right)\sum_{i=0}^{c-1} (1 - \alpha \mu)^{c-i-1} \Exv{\left\|\phi_{ct+i}\right\|^2} \quad 
+    \left(H \succeq \mu I \implies \left\| \frac{(I - \alpha H)^{c-i-1}}{(1 - \alpha \mu)^{c-i-1}} \right\|_2 \leq 1 \right)
+\end{align*}
+
+Now we need to bound $\Exv{\|\phi_t\|^2}$. We notice that by Taylor's theorem, for some $z$ on the segment between $w_t$ and $w^*$,
+\begin{align*}
+  \norm{
+    \nabla f(w_t)
+    -
+    H (w_t - w^*)
+  }
+  &=
+  \norm{
+    \nabla^2 f(z) (w_t - w^*)
+    - 
+    H (w_t - w^*)
+  } \\
+  &=
+  \norm{
+    \left( \nabla^2 f(z) - \nabla^2 f(w^*) \right) (w_t - w^*)
+  } \\
+  &\le
+  \norm{ \nabla^2 f(z) - \nabla^2 f(w^*) } \norm{ w_t - w^* } \\
+  &\le
+  M \norm{ z - w^* } \norm{ w_t - w^* } \\
+  &\le
+  M \norm{ w_t - w^* }^2
+\end{align*}
+where the matrix norm used here is the induced 2-norm, and $M$ is our bound on the Lipschitz continuity of the second derivative of $f$.
+It follows that
+\begin{align*}
+  \Exv{ \norm{
+    \nabla f(w_t) 
+    -
+    H (w_t - w^*)
+  }^2 }
+  &\le
+  M^2 \Exv{ \norm{ w_t - w^* }^4 }.
+\end{align*}
+From here, we can again apply our bound from Lemma~\ref{lemmaNewSingleIterBound}, which gives us
+\begin{align*}
+  \Exv{ \norm{
+    \nabla f(w_t)
+    -
+    H (w_t - w^*)
+  }^2 }
+  &\le
+  M^2 \cdot \frac{44^2 G^2 \delta^2 d}{\mu^2}.
+\end{align*}
+
+Putting back, we get 
+\begin{align*}
+    \Exv{\left\| \sum_{i=0}^{c-1} (I - \alpha H)^{c-i-1}\phi_{ct+i} \right\|^2}  
+    \leq \left( \sum_{i=0}^{c-1} (1 - \alpha \mu )^{c-i-1} \right)^2 \frac{44^2M^2G^2\delta^2d}{\mu^2}
+\end{align*}
+
+Right now the bound for the second term becomes:
+\begin{align*}
+    & 3 \alpha^2\left(\frac{1}{K} \Exv{\left\|\sum_{i=0}^{c-1} (I - (I-\alpha H)^c)^{-1} (I - \alpha H)^{c-i-1} \phi_{ct+i}\right\|}\right)^2 \\
+    & \quad \leq 
+        3\alpha^2d
+        \frac{44^2M^2G^2\delta^2d}{\mu^2}
+        \left( \sum_{i=0}^{c-1} (1 - \alpha \mu )^{c-i-1} \right)^2 
+        \|(I - (I - \alpha H)^c)^{-1}\|_2^2
+\end{align*}
+We know that $\|(I - (I - \alpha H)^c)^{-1}\|_2^2 \leq (1 - (1 - \alpha \mu)^c)^{-2}$, and
+\[
+\left( \sum_{i=0}^{c-1} (1 - \alpha \mu)^{c-i-1} \right)^2 
+= \left( \sum_{i=0}^{c-1} (1 - \alpha \mu)^i \right)^2 
+= \left( \frac{1-(1-\alpha\mu)^c}{1-(1-\alpha\mu)} \right)^2 
+= \frac{(1- (1- \alpha\mu)^c)^2}{\alpha^2\mu^2}
+\]
+therefore, we have
+\begin{align*}
+    \left( \sum_{i=0}^{c-1} (1 - \alpha \mu )^{c-i-1} \right)^2 \|(I - (I - \alpha H)^c)^{-1}\|_2^2 
+    \leq \frac{1}{\alpha^2\mu^2}
+\end{align*}
+With this, we can obtain the final bound on the second term substituting $\alpha = \sqrt{\frac{\delta^2 d}{G^2}}$
+\[
+    3 \alpha^2\left(\frac{1}{K} \Exv{\left\|\sum_{i=0}^{c-1} (I - (I-\alpha H)^c)^{-1} (I - \alpha H)^{c-i-1} \phi_{ct+i}\right\|}\right)^2 
+    \leq 
+    \frac{3\cdot 44^2 M^2 G^2 \delta^2 d}{\mu^4}
+\]
+
+Now we start analyzing the third term:
+\begin{align*}
+    & 3\Exv{\left\|\frac{1}{K}\sum_{t=0}^{K-1}\sum_{i=0}^{c-1}(I - (I - \alpha H)^c)^{-1} (I - \alpha H )^{c-i-1} \psi_{ct+i}\right\|^2} \\
+    & \quad \leq 3\norm{ (I - (I - \alpha H)^c)^{-1} }_2^2 \Exv{\left\|\frac{1}{K}\sum_{t=0}^{K-1}\sum_{i=0}^{c-1} (I - \alpha H )^{c-i-1} \psi_{ct+i}\right\|^2} \\
+    & \quad = 
+    \frac{3}{K^2} \norm{ (I - (I - \alpha H)^c)^{-1} }_2^2 \sum_{t=0}^{K-1}\sum_{i=0}^{c-1} \Exv{\norm{ (I - \alpha H )^{c-i-1} \psi_{ct+i} }}
+\end{align*}
+The last equality is because all the cross term has expectation $0$ as $\Exv{\psi_t} = 0$ by using unbiased quantization $Q_\delta$. Following this line of analysis:
+\begin{align*}
+    & 3\Exv{\left\|\frac{1}{K}\sum_{t=0}^{K-1}\sum_{i=0}^{c-1}(I - (I - \alpha H)^c)^{-1} (I - \alpha H )^{c-i-1} \psi_{ct+i}\right\|^2} \\
+    & \quad \leq 
+    \frac{3}{K^2} \norm{ (I - (I - \alpha H)^c)^{-1} }_2^2 \sum_{t=0}^{K-1}\sum_{i=0}^{c-1} \norm{(I - \alpha H )^{c-i-1}}_2^2\Exv{\norm{  \psi_{ct+i} }} \\
+    & \quad \leq 
+    \frac{3}{K^2} (1-(1-\alpha\mu)^c)^{-2} \sum_{t=0}^{K-1}\sum_{i=0}^{c-1} ((1-\alpha\mu)^{c-i-1})^2 \Exv{\norm{  \psi_{ct+i} }}
+\end{align*}
+where the last line is followed by $\|(I - (I - \alpha H)^c)^{-1}\|_2^2 \leq (1-(1-\alpha\mu)^c)^{-2}$ and $\norm{ (I - \alpha H)^t }_2^2 \leq (1 - \alpha \mu)^{2t}$. 
+Now we will bound $\Exv{\norm{ \psi_t }^2}$ as follow:
+\begin{align*}
+  \Exv{\norm{\psi_t}^2}
+  &= \Exv{ \norm{
+    Q_{\delta}\left(\alpha \nabla \tilde f_t(w_t) \right)
+    -
+    \alpha \nabla f(w_t)
+  }^2 } \\
+  &=
+  \Exv{ \norm{
+    Q_{\delta}\left(\alpha \nabla \tilde f_t(w_t) \right) 
+    -
+    \alpha \nabla \tilde f_t(w_t)
+    +
+    \alpha \nabla \tilde f_t(w_t)
+    -
+    \alpha \nabla f(w_t)
+  }^2 } \\ 
+  &=
+  \Exv{ \norm{
+    Q_{\delta}\left(\alpha \nabla \tilde f_t(w_t) \right)
+    -
+    \alpha \nabla \tilde f_t(w_t)
+  }^2 }
+  +
+  \Exv{ \norm{
+    \alpha \nabla \tilde f_t(w_t)
+    -
+    \alpha \nabla f(w_t)
+  }^2 } \\
+  &=
+  \delta^2 d
+  +
+  \alpha^2 G^2 
+  =
+  2 \delta^2 d,
+\end{align*}
+where the last line applies $\alpha = \sqrt{\frac{\delta^2d}{G^2}}$. Putting this back, we have
+\begin{align*}
+    & 3\Exv{\left\|\frac{1}{K}\sum_{t=0}^{K-1}\sum_{i=0}^{c-1}(I - (I - \alpha H)^c)^{-1} (I - \alpha H )^{c-i-1} \psi_{ct+i}\right\|^2} \\
+    & \quad \leq 
+    \frac{3}{K^2} 2 \delta^2 d (1-(1-\alpha\mu)^c)^{-2} \sum_{t=0}^{K-1}\sum_{i=0}^{c-1} ((1-\alpha\mu)^{c-i-1})^2 \\
+    & \quad \leq 
+    \frac{6 \delta^2 d}{K}  (1-(1-\alpha\mu)^c)^{-2} \sum_{i=0}^{c-1} (1-\alpha\mu)^{2i} \\
+    & \quad \leq 
+    \frac{6 \delta^2 d}{K}  (1-(1-\alpha\mu)^c)^{-2} \left(\sum_{i=0}^{c-1} (1-\alpha\mu)^{i}\right)^2 
+\end{align*}
+Since $\alpha\mu < 1$ by Lemma~\ref{lemmaNoiseBall}. We know that $\sum_{i=0}^{c-1} (1-\alpha\mu)^i = \frac{1-(1-\alpha\mu)^c}{1-(1-\alpha\mu)}$, therefore the final bound for this term is:
+\begin{align*}
+    & 3\Exv{\left\|\frac{1}{K}\sum_{t=0}^{K-1}\sum_{i=0}^{c-1}(I - (I - \alpha H)^c)^{-1} (I - \alpha H )^{c-i-1} \psi_{ct+i}\right\|^2}  \leq \frac{6 \delta^2 d}{K\alpha^2\mu^2} = \frac{6G^2}{\mu^2K}
+\end{align*}
+
+Putting the three bounds together, we get
+\begin{align*}
+    \Exv{\|\bar{w} - w^*\|^2} \leq\frac{3\cdot 44^2 M^2 G^2 \delta^2 d}{\mu^4} + \frac{6G^2}{\mu^2K}+ \frac{528 G \delta \sqrt{d}}{\gamma \mu K^2} 
+\end{align*}
+
+Recall that $cK \leq T < cK+c$, we could replace $K$ with $T$ in the abovementioned bounds :
+\begin{align*}
+    \Exv{\|\bar{w} - w^*\|^2} \leq\frac{3\cdot 44^2 M^2 G^2 \delta^2 d}{\mu^4} + \frac{6G^2c}{\mu^2T}+ \frac{528 G \delta \sqrt{d}c^2}{\gamma \mu T^2} 
+\end{align*}
+which is what we want to prove.
+
+\end{proof}
+

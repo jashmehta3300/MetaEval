@@ -1,0 +1,199 @@
+\begin{thebibliography}{30}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Audemard, Lagniez, and Simon(2013)}]{audemard2013improving}
+Audemard, G.; Lagniez, J.-M.; and Simon, L. 2013.
+\newblock Improving {Glucose} for incremental {SAT} solving with assumptions:
+  Application to {MUS} extraction.
+\newblock In \emph{International conference on theory and applications of
+  satisfiability testing}, 309--317. Springer.
+
+\bibitem[{Biere(2019)}]{biere2019cadical}
+Biere, A. 2019.
+\newblock \textsc{CaDiCaL} at the {SAT} Race 2019.
+\newblock In Heule, M. J.~H.; J\"{a}rvisalo, M.; and Suda, M., eds.,
+  \emph{Proceedings of SAT Race 2019: Solver and Benchmark Descriptions},
+  volume B-2019-1. Department of Computer Science, University of Helsinki.
+
+\bibitem[{Bright et~al.(2020{\natexlab{a}})Bright, Cheung, Stevens, Roy,
+  Kotsireas, and Ganesh}]{bright2020nonexistence}
+Bright, C.; Cheung, K.; Stevens, B.; Roy, D.; Kotsireas, I.; and Ganesh, V.
+  2020{\natexlab{a}}.
+\newblock A Nonexistence Certificate for Projective Planes of Order Ten with
+  Weight 15 Codewords.
+\newblock \emph{Applicable Algebra in Engineering, Communication and Computing}
+  31: 195--213.
+
+\bibitem[{Bright et~al.(2020{\natexlab{b}})Bright, Cheung, Stevens, Kotsireas,
+  and Ganesh}]{bright2020unsatisfiability}
+Bright, C.; Cheung, K. K.~H.; Stevens, B.; Kotsireas, I.; and Ganesh, V.
+  2020{\natexlab{b}}.
+\newblock Unsatisfiability Proofs for Weight 16 Codewords in {Lam's} Problem.
+\newblock In \emph{Proceedings of the 29th International Joint Conference on
+  Artificial Intelligence}, 1460--1466. IJCAI Press.
+
+\bibitem[{Bruck and Ryser(1949)}]{bruck1949nonexistence}
+Bruck, R.~H.; and Ryser, H.~J. 1949.
+\newblock The nonexistence of certain finite projective planes.
+\newblock \emph{Canadian Journal of Mathematics} 1(1): 88--93.
+
+\bibitem[{Carter(1974)}]{carter1974existence}
+Carter, J.~L. 1974.
+\newblock \emph{On the existence of a projective plane of order ten}.
+\newblock Ph.D. thesis, University of California, Berkeley.
+
+\bibitem[{Cruz-Filipe, Marques-Silva, and
+  Schneider-Kamp(2018)}]{cruz2018formally}
+Cruz-Filipe, L.; Marques-Silva, J.; and Schneider-Kamp, P. 2018.
+\newblock Formally verifying the solution to the {Boolean} {Pythagorean}
+  triples problem.
+\newblock \emph{Journal of Automated Reasoning} 1--28.
+
+\bibitem[{Dembowski(1968)}]{dembowski}
+Dembowski, P. 1968.
+\newblock \emph{Finite geometries}.
+\newblock Springer-Verlag.
+
+\bibitem[{Ganesh et~al.(2012)Ganesh, O'Donnell, Soos, Devadas, Rinard, and
+  Solar-Lezama}]{ganesh2012lynx}
+Ganesh, V.; O'Donnell, C.~W.; Soos, M.; Devadas, S.; Rinard, M.~C.; and
+  Solar-Lezama, A. 2012.
+\newblock Lynx: A programmatic {SAT} solver for the {RNA}-folding problem.
+\newblock In \emph{International Conference on Theory and Applications of
+  Satisfiability Testing}, 143--156. Springer.
+
+\bibitem[{Heule(2018)}]{heule2018schur}
+Heule, M. J.~H. 2018.
+\newblock Schur Number Five.
+\newblock In \emph{Proceedings of the Thirty-Second {AAAI} Conference on
+  Artificial Intelligence}, 6598--6606.
+
+\bibitem[{Heule, Kullmann, and Marek(2016)}]{heule2016solving}
+Heule, M. J.~H.; Kullmann, O.; and Marek, V.~W. 2016.
+\newblock Solving and verifying the {Boolean} {Pythagorean} triples problem via
+  cube-and-conquer.
+\newblock In \emph{International Conference on Theory and Applications of
+  Satisfiability Testing}, 228--245.
+
+\bibitem[{Heule, Kullmann, and Marek(2017)}]{heule2017solving}
+Heule, M. J.~H.; Kullmann, O.; and Marek, V.~W. 2017.
+\newblock Solving Very Hard Problems: Cube-and-Conquer, a Hybrid {SAT} Solving
+  Method.
+\newblock In \emph{Proceedings of the 26th International Joint Conference on
+  Artificial Intelligence}, 4864--4868. IJCAI Press.
+
+\bibitem[{Heule et~al.(2011)Heule, Kullmann, Wieringa, and
+  Biere}]{heule2011cube}
+Heule, M. J.~H.; Kullmann, O.; Wieringa, S.; and Biere, A. 2011.
+\newblock Cube and conquer: Guiding {CDCL} {SAT} solvers by lookaheads.
+\newblock In Eder, K.; Louren{\c c}o, J.; and Shehory, O., eds., \emph{Haifa
+  Verification Conference}, 50--65. Springer.
+
+\bibitem[{Kaski and {\"O}sterg{\aa}rd(2006)}]{kaski2006classification}
+Kaski, P.; and {\"O}sterg{\aa}rd, P. R.~J. 2006.
+\newblock \emph{Classification Algorithms for Codes and Designs}.
+\newblock Springer.
+
+\bibitem[{Keller(2019)}]{keller2019}
+Keller, C. 2019.
+\newblock {SMTCoq}: Mixing Automatic and Interactive Proof Technologies.
+\newblock In Hanna, G.; Reid, D.~A.; and de~Villiers, M., eds., \emph{Proof
+  Technology in Mathematics Research and Teaching}, 73--90. Cham: Springer
+  International Publishing.
+
+\bibitem[{Knuth(2015)}]{knuth2015art}
+Knuth, D.~E. 2015.
+\newblock \emph{The Art of Computer Programming, Volume 4, Fascicle 6:
+  Satisfiability}.
+\newblock Addison-Wesley Professional.
+
+\bibitem[{Konev and Lisitsa(2014)}]{konev2014sat}
+Konev, B.; and Lisitsa, A. 2014.
+\newblock A {SAT} Attack on the {E}rd{\H{o}}s Discrepancy Conjecture.
+\newblock In Sinz, C.; and Egly, U., eds., \emph{Theory and Applications of
+  Satisfiability Testing -- SAT 2014}, volume 8561 of \emph{LNCS}, 219--226.
+  Springer International Publishing, Cham.
+\newblock ISBN 978-3-319-09284-3.
+
+\bibitem[{Lam(1990)}]{lam1990reliable}
+Lam, C. W.~H. 1990.
+\newblock How reliable is a computer-based proof?
+\newblock \emph{Mathematical Intelligencer} 12(1): 8--12.
+
+\bibitem[{Lam, Crossfield, and Thiel(1985)}]{lam1985estimates}
+Lam, C. W.~H.; Crossfield, S.; and Thiel, L. 1985.
+\newblock Estimates of a computer search for a projective plane of order 10.
+\newblock \emph{Congressus Numerantium} 48: 253--263.
+
+\bibitem[{Lam, Thiel, and Swiercz(1986)}]{lam1986nonexistence}
+Lam, C. W.~H.; Thiel, L.; and Swiercz, S. 1986.
+\newblock The nonexistence of code words of weight 16 in a projective plane of
+  order 10.
+\newblock \emph{Journal of Combinatorial Theory, Series A} 42(2): 207--214.
+
+\bibitem[{Lam, Thiel, and Swiercz(1989)}]{lam1989non}
+Lam, C. W.~H.; Thiel, L.; and Swiercz, S. 1989.
+\newblock The non-existence of finite projective planes of order 10.
+\newblock \emph{Canadian Journal of Mathematics} 41(6): 1117--1123.
+
+\bibitem[{Lammich(2017)}]{lammich2017efficient}
+Lammich, P. 2017.
+\newblock Efficient verified {(UN)SAT} certificate checking.
+\newblock In \emph{International Conference on Automated Deduction}, 237--254.
+  Springer.
+
+\bibitem[{Liang et~al.(2016)Liang, Ganesh, Poupart, and
+  Czarnecki}]{liang2016exponential}
+Liang, J.~H.; Ganesh, V.; Poupart, P.; and Czarnecki, K. 2016.
+\newblock Exponential Recency Weighted Average Branching Heuristic for SAT
+  Solvers.
+\newblock In \emph{Proceedings of the Thirtieth AAAI Conference on Artificial
+  Intelligence}, 3434--3440.
+
+\bibitem[{MacWilliams, Sloane, and Thompson(1973)}]{macwilliams1973existence}
+MacWilliams, F.~J.; Sloane, N. J.~A.; and Thompson, J.~G. 1973.
+\newblock On the existence of a projective plane of order 10.
+\newblock \emph{Journal of Combinatorial Theory, Series A} 14(1): 66--78.
+
+\bibitem[{McKay and Piperno(2014)}]{McKay201494}
+McKay, B.~D.; and Piperno, A. 2014.
+\newblock Practical graph isomorphism, {II}.
+\newblock \emph{Journal of Symbolic Computation} 60(0): 94--112.
+
+\bibitem[{Roy(2011)}]{roy2011confirmation}
+Roy, D.~J. 2011.
+\newblock \emph{Confirmation of the Non-existence of a Projective Plane of
+  Order 10}.
+\newblock Master's thesis, Carleton University.
+
+\bibitem[{Sinz(2005)}]{sinz2005towards}
+Sinz, C. 2005.
+\newblock Towards an optimal {CNF} encoding of {Boolean} cardinality
+  constraints.
+\newblock In \emph{International conference on principles and practice of
+  constraint programming}, 827--831. Springer.
+
+\bibitem[{von Staudt(1856)}]{von1856beitrage}
+von Staudt, K. G.~C. 1856.
+\newblock \emph{Beitr{\"a}ge zur Geometrie der Lage, Erstes Heft}.
+\newblock N{\"u}rnberg: Verlag der Fr. Korn'schen Buchhandlung.
+
+\bibitem[{Weisstein(2002)}]{weisstein2002crc}
+Weisstein, E.~W. 2002.
+\newblock \emph{{CRC} Concise Encyclopedia of Mathematics}.
+\newblock CRC Press.
+
+\bibitem[{Wetzler, Heule, and Hunt~Jr.(2014)}]{wetzler2014drat}
+Wetzler, N.; Heule, M. J.~H.; and Hunt~Jr., W.~A. 2014.
+\newblock {DRAT}-trim: Efficient checking and trimming using expressive clausal
+  proofs.
+\newblock In \emph{International Conference on Theory and Applications of
+  Satisfiability Testing}, 422--429. Springer.
+
+\end{thebibliography}

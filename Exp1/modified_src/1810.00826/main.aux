@@ -1,0 +1,184 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{hamilton2017representation}
+\citation{li2015gated,hamilton2017inductive,kipf2016semi,velivckovic2017graph,xu2018representation}
+\citation{xu2018representation,gilmer2017neural}
+\citation{ying2018hierarchical}
+\citation{scarselli2009graph,battaglia2016interaction,defferrard2016convolutional,duvenaud2015convolutional,hamilton2017inductive,kearnes2016molecular,kipf2016semi,li2015gated,velivckovic2017graph,santoro2017simple,xu2018representation,santoro2018measuring,verma2018graph,ying2018hierarchical,zhang2018end}
+\citation{weisfeiler1968reduction}
+\citation{babai1979canonical}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{kipf2016semi}
+\citation{hamilton2017inductive}
+\citation{hamilton2017inductive}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Preliminaries}{2}{section.2}\protected@file@percent }
+\newlabel{sec:preliminary}{{2}{2}{Preliminaries}{section.2}{}}
+\newlabel{eq:combine}{{2.1}{2}{Preliminaries}{equation.2.1}{}}
+\citation{kipf2016semi}
+\citation{xu2018representation,gilmer2017neural}
+\citation{ying2018hierarchical,zhang2018end}
+\citation{garey1979guide,garey2002computers,babai2016graph}
+\citation{cai1992optimal}
+\citation{weisfeiler1968reduction}
+\citation{babai1979canonical}
+\citation{shervashidze2011weisfeiler}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces {\bf  An overview of our theoretical framework.} Middle panel: rooted subtree structures (at the blue node) that the WL test uses to distinguish different graphs. Right panel: if a GNN's aggregation function captures the \textit  {full multiset} of node neighbors, the GNN can capture the rooted subtrees in a recursive manner and be as powerful as the WL test.\relax }}{3}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:wl-trees}{{1}{3}{{\bf An overview of our theoretical framework.} Middle panel: rooted subtree structures (at the blue node) that the WL test uses to distinguish different graphs. Right panel: if a GNN's aggregation function captures the \textit {full multiset} of node neighbors, the GNN can capture the rooted subtrees in a recursive manner and be as powerful as the WL test.\relax }{figure.caption.1}{}}
+\newlabel{eq:graphsage-agg}{{2.2}{3}{Preliminaries}{equation.2.2}{}}
+\newlabel{eq:gcn-agg}{{2.3}{3}{Preliminaries}{equation.2.3}{}}
+\newlabel{eq:graph_pool}{{2.4}{3}{Preliminaries}{equation.2.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Theoretical framework: overview}{3}{section.3}\protected@file@percent }
+\newlabel{sec:framework}{{3}{3}{Theoretical framework: overview}{section.3}{}}
+\citation{cai1992optimal,douglas2011weisfeiler,evdokimov1999isomorphism}
+\citation{yanardag2015deep}
+\newlabel{def:multiset}{{1}{4}{Multiset}{theorem.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Building powerful graph neural networks}{4}{section.4}\protected@file@percent }
+\newlabel{sec:method}{{4}{4}{Building powerful graph neural networks}{section.4}{}}
+\newlabel{theorem:upper}{{2}{4}{}{theorem.2}{}}
+\newlabel{theorem:condition}{{3}{4}{}{theorem.3}{}}
+\newlabel{condition-a}{{3}{4}{}{theorem.3}{}}
+\newlabel{theorem:countability}{{4}{4}{}{theorem.4}{}}
+\citation{zaheer2017deep}
+\citation{hornik1989multilayer,hornik1991approximation}
+\citation{xu2018representation}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Graph Isomorphism Network (GIN)}{5}{subsection.4.1}\protected@file@percent }
+\newlabel{subsec:gin}{{4.1}{5}{Graph Isomorphism Network (GIN)}{subsection.4.1}{}}
+\newlabel{theorem:sum}{{5}{5}{}{theorem.5}{}}
+\newlabel{lemma:gin-wl}{{6}{5}{}{theorem.6}{}}
+\newlabel{GIN-agg}{{4.1}{5}{Graph Isomorphism Network (GIN)}{equation.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Graph-level readout of GIN}{5}{subsection.4.2}\protected@file@percent }
+\citation{kipf2016semi}
+\citation{hamilton2017inductive}
+\citation{hornik1991approximation}
+\citation{duvenaud2015convolutional,kipf2016semi,zhang2018end}
+\citation{Neld:Wedd:1972}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces {\bf  Ranking by expressive power for sum, mean and max aggregators over a multiset}. Left panel shows the input multiset, \textit  {i.e.}, the network neighborhood to be aggregated. The next three panels illustrate the aspects of the multiset a given aggregator is able to capture: sum captures the full multiset, mean captures the proportion/distribution of elements of a given type, and the max aggregator ignores multiplicities (reduces the multiset to a simple set).\relax }}{6}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:ranking}{{2}{6}{{\bf Ranking by expressive power for sum, mean and max aggregators over a multiset}. Left panel shows the input multiset, \ie , the network neighborhood to be aggregated. The next three panels illustrate the aspects of the multiset a given aggregator is able to capture: sum captures the full multiset, mean captures the proportion/distribution of elements of a given type, and the max aggregator ignores multiplicities (reduces the multiset to a simple set).\relax }{figure.caption.2}{}}
+\newlabel{fig:all-same}{{3a}{6}{Mean and Max both fail\relax }{figure.caption.3}{}}
+\newlabel{sub@fig:all-same}{{a}{6}{Mean and Max both fail\relax }{figure.caption.3}{}}
+\newlabel{fig:max-fail}{{3b}{6}{Max fails\relax }{figure.caption.3}{}}
+\newlabel{sub@fig:max-fail}{{b}{6}{Max fails\relax }{figure.caption.3}{}}
+\newlabel{fig:mean-fail}{{3c}{6}{Mean and Max both fail\relax }{figure.caption.3}{}}
+\newlabel{sub@fig:mean-fail}{{c}{6}{Mean and Max both fail\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces {\bf  Examples of graph structures that mean and max aggregators fail to distinguish.} Between the two graphs, nodes $v$ and $v'$ get the same embedding even though their corresponding graph structures differ. Figure\nobreakspace  {}\ref  {fig:ranking} gives reasoning about how different aggregators ``compress'' different multisets and thus fail to distinguish them. \relax }}{6}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:graphs-fail}{{3}{6}{{\bf Examples of graph structures that mean and max aggregators fail to distinguish.} Between the two graphs, nodes $v$ and $v'$ get the same embedding even though their corresponding graph structures differ. Figure~\ref {fig:ranking} gives reasoning about how different aggregators ``compress'' different multisets and thus fail to distinguish them. \relax }{figure.caption.3}{}}
+\newlabel{eq:GIN-readout}{{4.2}{6}{Graph-level readout of GIN}{equation.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5} Less powerful but still interesting GNNs}{6}{section.5}\protected@file@percent }
+\newlabel{sec:theory}{{5}{6}{Less powerful but still interesting GNNs}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}1-layer perceptrons are not sufficient}{6}{subsection.5.1}\protected@file@percent }
+\newlabel{theorem:mlp}{{7}{6}{}{theorem.7}{}}
+\citation{qi2017pointnet}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Structures that confuse mean and max-pooling }{7}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:confuse}{{5.2}{7}{Structures that confuse mean and max-pooling}{subsection.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Mean learns distributions}{7}{subsection.5.3}\protected@file@percent }
+\newlabel{theorem:mean}{{8}{7}{}{theorem.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Max-pooling learns sets with distinct elements}{7}{subsection.5.4}\protected@file@percent }
+\citation{velivckovic2017graph}
+\citation{hamilton2017inductive,murphy2018janossy}
+\citation{scarselli2009computational}
+\citation{scarselli2009graph}
+\citation{lei2017deriving}
+\citation{battaglia2016interaction,scarselli2009graph,duvenaud2015convolutional}
+\citation{yanardag2015deep}
+\newlabel{theorem:max-pooling}{{9}{8}{}{theorem.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Remarks on other aggregators}{8}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Other related work}{8}{section.6}\protected@file@percent }
+\newlabel{sec:related}{{6}{8}{Other related work}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Experiments}{8}{section.7}\protected@file@percent }
+\newlabel{sec:experiments}{{7}{8}{Experiments}{section.7}{}}
+\citation{yanardag2015deep,niepert2016learning}
+\citation{chang2011libsvm}
+\citation{ioffe2015batch}
+\citation{kingma2014adam}
+\citation{srivastava2014dropout}
+\citation{shervashidze2011weisfeiler}
+\citation{chang2011libsvm}
+\citation{atwood2016diffusion}
+\citation{niepert2016learning}
+\citation{zhang2018end}
+\citation{ivanov2018anonymous}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Training set performance of GINs, less powerful GNN variants, and the WL subtree kernel. \relax }}{9}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:curve}{{4}{9}{Training set performance of GINs, less powerful GNN variants, and the WL subtree kernel. \relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Results}{9}{subsection.7.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces {\bf  Test set classification accuracies (\%).} The best-performing GNNs are highlighted with boldface. On datasets where GINs' accuracy is not strictly the highest among GNN variants, we see that GINs are still comparable to the best GNN because a paired t-test at significance level 10\% does not distinguish GINs from the best; thus, GINs are also highlighted with boldface. If a baseline performs significantly better than all GNNs, we highlight it with boldface and asterisk. \relax }}{10}{table.caption.5}\protected@file@percent }
+\newlabel{tab:results}{{1}{10}{{\bf Test set classification accuracies (\%).} The best-performing GNNs are highlighted with boldface. On datasets where GINs' accuracy is not strictly the highest among GNN variants, we see that GINs are still comparable to the best GNN because a paired t-test at significance level 10\% does not distinguish GINs from the best; thus, GINs are also highlighted with boldface. If a baseline performs significantly better than all GNNs, we highlight it with boldface and asterisk. \relax }{table.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{10}{section.8}\protected@file@percent }
+\newlabel{sec:conclusion}{{8}{10}{Conclusion}{section.8}{}}
+\bibdata{deepgraph}
+\bibcite{atwood2016diffusion}{{1}{2016}{{Atwood \& Towsley}}{{Atwood and Towsley}}}
+\bibcite{babai2016graph}{{2}{2016}{{Babai}}{{}}}
+\bibcite{babai1979canonical}{{3}{1979}{{Babai \& Kucera}}{{Babai and Kucera}}}
+\bibcite{battaglia2016interaction}{{4}{2016}{{Battaglia et~al.}}{{Battaglia, Pascanu, Lai, Rezende, et~al.}}}
+\bibcite{cai1992optimal}{{5}{1992}{{Cai et~al.}}{{Cai, F{\"u}rer, and Immerman}}}
+\bibcite{chang2011libsvm}{{6}{2011}{{Chang \& Lin}}{{Chang and Lin}}}
+\bibcite{defferrard2016convolutional}{{7}{2016}{{Defferrard et~al.}}{{Defferrard, Bresson, and Vandergheynst}}}
+\bibcite{douglas2011weisfeiler}{{8}{2011}{{Douglas}}{{}}}
+\bibcite{duvenaud2015convolutional}{{9}{2015}{{Duvenaud et~al.}}{{Duvenaud, Maclaurin, Iparraguirre, Bombarell, Hirzel, Aspuru-Guzik, and Adams}}}
+\bibcite{evdokimov1999isomorphism}{{10}{1999}{{Evdokimov \& Ponomarenko}}{{Evdokimov and Ponomarenko}}}
+\bibcite{garey1979guide}{{11}{1979}{{Garey}}{{}}}
+\bibcite{garey2002computers}{{12}{2002}{{Garey \& Johnson}}{{Garey and Johnson}}}
+\bibcite{gilmer2017neural}{{13}{2017}{{Gilmer et~al.}}{{Gilmer, Schoenholz, Riley, Vinyals, and Dahl}}}
+\bibcite{hamilton2017inductive}{{14}{2017{a}}{{Hamilton et~al.}}{{Hamilton, Ying, and Leskovec}}}
+\bibcite{hamilton2017representation}{{15}{2017{b}}{{Hamilton et~al.}}{{Hamilton, Ying, and Leskovec}}}
+\bibcite{hornik1991approximation}{{16}{1991}{{Hornik}}{{}}}
+\bibcite{hornik1989multilayer}{{17}{1989}{{Hornik et~al.}}{{Hornik, Stinchcombe, and White}}}
+\bibcite{ioffe2015batch}{{18}{2015}{{Ioffe \& Szegedy}}{{Ioffe and Szegedy}}}
+\bibcite{ivanov2018anonymous}{{19}{2018}{{Ivanov \& Burnaev}}{{Ivanov and Burnaev}}}
+\bibcite{kearnes2016molecular}{{20}{2016}{{Kearnes et~al.}}{{Kearnes, McCloskey, Berndl, Pande, and Riley}}}
+\bibcite{kingma2014adam}{{21}{2015}{{Kingma \& Ba}}{{Kingma and Ba}}}
+\bibcite{kipf2016semi}{{22}{2017}{{Kipf \& Welling}}{{Kipf and Welling}}}
+\bibcite{lei2017deriving}{{23}{2017}{{Lei et~al.}}{{Lei, Jin, Barzilay, and Jaakkola}}}
+\bibcite{li2015gated}{{24}{2016}{{Li et~al.}}{{Li, Tarlow, Brockschmidt, and Zemel}}}
+\bibcite{murphy2018janossy}{{25}{2018}{{Murphy et~al.}}{{Murphy, Srinivasan, Rao, and Ribeiro}}}
+\bibcite{Neld:Wedd:1972}{{26}{1972}{{Nelder \& Wedderburn}}{{Nelder and Wedderburn}}}
+\bibcite{niepert2016learning}{{27}{2016}{{Niepert et~al.}}{{Niepert, Ahmed, and Kutzkov}}}
+\bibcite{qi2017pointnet}{{28}{2017}{{Qi et~al.}}{{Qi, Su, Mo, and Guibas}}}
+\bibcite{santoro2017simple}{{29}{2017}{{Santoro et~al.}}{{Santoro, Raposo, Barrett, Malinowski, Pascanu, Battaglia, and Lillicrap}}}
+\bibcite{santoro2018measuring}{{30}{2018}{{Santoro et~al.}}{{Santoro, Hill, Barrett, Morcos, and Lillicrap}}}
+\bibcite{scarselli2009computational}{{31}{2009{a}}{{Scarselli et~al.}}{{Scarselli, Gori, Tsoi, Hagenbuchner, and Monfardini}}}
+\bibcite{scarselli2009graph}{{32}{2009{b}}{{Scarselli et~al.}}{{Scarselli, Gori, Tsoi, Hagenbuchner, and Monfardini}}}
+\bibcite{shervashidze2011weisfeiler}{{33}{2011}{{Shervashidze et~al.}}{{Shervashidze, Schweitzer, Leeuwen, Mehlhorn, and Borgwardt}}}
+\bibcite{srivastava2014dropout}{{34}{2014}{{Srivastava et~al.}}{{Srivastava, Hinton, Krizhevsky, Sutskever, and Salakhutdinov}}}
+\bibcite{velivckovic2017graph}{{35}{2018}{{Velickovic et~al.}}{{Velickovic, Cucurull, Casanova, Romero, Lio, and Bengio}}}
+\bibcite{verma2018graph}{{36}{2018}{{Verma \& Zhang}}{{Verma and Zhang}}}
+\bibcite{weisfeiler1968reduction}{{37}{1968}{{Weisfeiler \& Lehman}}{{Weisfeiler and Lehman}}}
+\bibcite{xu2018representation}{{38}{2018}{{Xu et~al.}}{{Xu, Li, Tian, Sonobe, Kawarabayashi, and Jegelka}}}
+\bibcite{yanardag2015deep}{{39}{2015}{{Yanardag \& Vishwanathan}}{{Yanardag and Vishwanathan}}}
+\bibcite{ying2018hierarchical}{{40}{2018}{{Ying et~al.}}{{Ying, You, Morris, Ren, Hamilton, and Leskovec}}}
+\bibcite{zaheer2017deep}{{41}{2017}{{Zaheer et~al.}}{{Zaheer, Kottur, Ravanbakhsh, Poczos, Salakhutdinov, and Smola}}}
+\bibcite{zhang2018end}{{42}{2018}{{Zhang et~al.}}{{Zhang, Cui, Neumann, and Chen}}}
+\bibstyle{iclr2019_conference}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Proof for Lemma\nobreakspace  {}\ref  {theorem:upper}}{14}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {B}Proof for Theorem\nobreakspace  {}\ref  {theorem:condition}}{14}{appendix.B}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {C}Proof for Lemma\nobreakspace  {}\ref  {theorem:countability}}{15}{appendix.C}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {D}Proof for Lemma\nobreakspace  {}\ref  {theorem:sum}}{16}{appendix.D}\protected@file@percent }
+\newlabel{proof:sum}{{D}{16}{Proof for Lemma~\ref {theorem:sum}}{appendix.D}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {E}Proof of Corollary\nobreakspace  {}\ref  {lemma:gin-wl}}{16}{appendix.E}\protected@file@percent }
+\newlabel{eq:rewrite}{{E.1}{16}{Proof of Corollary~\ref {lemma:gin-wl}}{equation.E.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {F}Proof for Lemma\nobreakspace  {}\ref  {theorem:mlp}}{16}{appendix.F}\protected@file@percent }
+\citation{yanardag2015deep}
+\@writefile{toc}{\contentsline {section}{\numberline {G}Proof for Corollary\nobreakspace  {}\ref  {theorem:mean}}{17}{appendix.G}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {H}Proof for Corollary\nobreakspace  {}\ref  {theorem:max-pooling}}{17}{appendix.H}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {I}Details of datasets}{17}{appendix.I}\protected@file@percent }
+\newlabel{app:dataset}{{I}{17}{Details of datasets}{appendix.I}{}}
+\@writefile{toc}{\contentsline {paragraph}{Social networks datasets.}{17}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Bioinformatics datasets.}{17}{section*.9}\protected@file@percent }
+\gdef \@abspage@last{17}
