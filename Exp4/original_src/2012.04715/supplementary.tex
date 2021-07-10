@@ -1,0 +1,158 @@
+\pdfoutput=1
+\def\year{2021}\relax
+\documentclass[letterpaper]{article}
+\usepackage{aaai21}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{graphicx}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+  \pdfinfo{
+/Title (A SAT-based Resolution of Lam's Problem: Online Appendix)
+}
+\usepackage{tikz}
+\usepackage{caption}
+\newcommand*\elide{\textup{[\,\dots]}}
+\nocopyright
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{A SAT-based Resolution of Lam's Problem: Online Appendix}
+\author{}
+\date{}
+\maketitle
+\addtocounter{table}{1}
+
+\begin{figure}[h!]
+\input{case1-partial.tikz}
+\caption*{One partial completion of $A$ found
+by our main search.  Black entries represent $1$,
+white entries represent $0$, and each gray rectangle
+contains a single $1$.
+This particular completion consists of an
+outside block along with
+the inside blocks 3, 4, and~5.
+As mentioned in the main text, the rows of the $A2$
+have been reordered from lexicographic order---instead
+the first row is incident to as many inside blocks as possible
+and the number of mutually intersecting rows in $A2$
+at the top is maximized.}
+\end{figure}
+
+\begin{theorem}\label{thm:record}
+If the $A2$ SAT instances are solved with isomorphism removal performed
+after the completion of each level then
+the solver will record exactly one
+representative from each equivalence class
+of $A2$ completions.
+\end{theorem}
+
+\begin{proof}
+Because isomorphism removal will be performed after
+the final level (i.e., after finding a complete $A2$)
+at most one solution from each equivalence class will be recorded.
+
+Next, we must show that at least one solution from each equivalence
+class will be recorded.
+Suppose for the sake of contradiction that there is a solution $S$
+that is not recorded (and no solutions isomorphic to $S$ are recorded).
+Let $S_l$ denote the submatrix of $S$ up to and including level $l$.
+Since $S_0$ (the empty matrix) will be recorded at the beginning of the
+search and $S=S_6$ is not recorded there must be a level $l$ such that
+$S_{l-1}$ is recorded but $S_{l}$ is not recorded.
+
+Since $S_{l-1}$ is recorded the solver will examine all possible ways
+of completing $S_{l-1}$ to level $l$ and thus will encounter $S_l$
+in the search.  Since $S_l$ will be found but not recorded, there must be some isomorphic
+$S'_l$ that was previously recorded.  Let $\varphi$ be the permutation
+of rows and columns that sends $S_l$ to $S'_l$ and let $\varphi(S)$
+denote applying the permutations of $\varphi$ to $S$
+followed by resorting its rows
+(as the lexicographic ordering of the rows after the first~$l$ levels may be disturbed).
+This resorting does not affect the first~$l$ levels of $\varphi(S)$ as
+these rows are already sorted and lexicographically greater than the rows
+after the first~$l$ levels.
+Thus $\varphi(S)$ is an $A2$ isomorphic to $S$ whose first $l$
+levels consist of $S'_l$ and are therefore recorded.
+
+Now there must be a new level $l'$ with $l<l'$ such that
+the first $l'-1$ levels of $\varphi(S)$ are recorded but the first
+$l'$ levels are not recorded.  Repeating the above reasoning
+we find a recorded matrix isomorphic to the first $l'$ levels of $\varphi(S)$
+and proceeding inductively we arrive at a recorded matrix containing all
+levels and that is isomorphic to $S$---a contradiction.
+\end{proof}
+
+Note that one must be careful when isomorphism removal
+is performed in order to ensure completeness---the proof of Theorem 1 requires that
+isomorphism removal is performed following the completion
+of each level.  The theorem will not necessarily hold if isomorphism removal
+is performed following the completion of each row, for example.
+
+\def\X{\phantom0}
+\begin{table}\centering
+\begin{tabular}{ccc}
+Case  & Inequiv. & Total    \\
+   \X1 & \hfill   20,129 & \hfill11,530,368 \\ 
+   \X2 & \hfill   11,861 & \hfill9,014,784 \\ 
+   \X3 & \hfill    2,501 & \hfill1,888,512 \\ 
+   \X5 & \hfill    5,219 & \hfill7,704,576 \\ 
+   \X6 & \hfill  111,538 & \hfill5,347,968 \\ 
+   \X7 & \hfill   13,211 & \hfill 840,704 \\ 
+   \X8 & \hfill  110,879 & \hfill3,542,944 \\ 
+   \X9 & \hfill   87,807 & \hfill 702,456 \\ 
+    11 & \hfill    7,059 & \hfill 225,632 \\ 
+    12 & \hfill   10,635 & \hfill1,020,576 \\ 
+    13 & \hfill   11,961 & \hfill 574,128 \\ 
+    15 & \hfill   43,719 & \hfill 697,936 \\ 
+    16 & \hfill    8,040 & \hfill 192,960 \\ 
+    17 & \hfill    9,110 & \hfill 145,760 \\ 
+    18 & \hfill    3,406 & \hfill 162,552 \\ 
+    20 & \hfill   27,221 & \hfill3,918,672 \\ 
+    21 & \hfill    9,410 & \hfill2,019,744 \\ 
+    22 & \hfill   18,947 & \hfill 452,496 \\ 
+    23 & \hfill    7,971 & \hfill 191,304 \\ 
+    24 & \hfill   17,102 & \hfill 546,960 \\ 
+    25 & \hfill   21,180 & \hfill 338,816 \\ 
+    26 & \hfill   18,970 & \hfill 151,760 \\ 
+    27 & \hfill    1,759 & \hfill  84,432 \\ 
+    32 & \hfill    2,052 & \hfill 570,528 \\ 
+    33 & \hfill   16,509 & \hfill 131,888 \\ 
+    34 & \hfill      673 & \hfill  10,768 \\ 
+    36 & \hfill    5,166 & \hfill 646,464 \\ 
+    37 & \hfill    3,215 & \hfill  77,160 \\ 
+    38 & \hfill    5,445 & \hfill 516,096 \\ 
+    39 & \hfill      505 & \hfill  12,120 \\ 
+    41 & \hfill   10,102 & \hfill  80,816 \\ 
+    42 & \hfill    1,679 & \hfill  52,896 \\ 
+    43 & \hfill    4,855 & \hfill  38,840 \\ 
+    46 & \hfill       50 & \hfill  13,632 \\ 
+    47 & \hfill      912 & \hfill  21,888 \\ 
+    48 & \hfill      863 & \hfill  40,496 \\ 
+    49 & \hfill      101 & \hfill1,255,680 \\ 
+    50 & \hfill    1,064 & \hfill 291,600 \\ 
+    51 & \hfill    3,685 & \hfill 174,384 \\ 
+    52 & \hfill      604 & \hfill  43,488 \\ 
+    53 & \hfill      182 & \hfill 103,104 \\ 
+    54 & \hfill    1,458 & \hfill 409,536 \\ 
+    55 & \hfill    3,656 & \hfill 115,224 \\ 
+    56 & \hfill      794 & \hfill  12,432 \\ 
+    57 & \hfill      601 & \hfill  56,400 \\ 
+    58 & \hfill    4,188 & \hfill  33,320 \\ 
+    60 & \hfill       90 & \hfill   6,264 \\ 
+    63 & \hfill      196 & \hfill   6,000 \\ 
+    64 & \hfill    1,135 & \hfill 101,760 \\ 
+    65 & \hfill      787 & \hfill  35,948 \\ 
+    66 & \hfill      168 & \hfill   2,648 \\ 
+Total & \hfill  650,370 & \hfill56,157,420
+\end{tabular}
+\caption*{Counts for the number of inequivalent $A2$s (up to isomorphism)
+and the total number of $A2$s in each case with no isomorphism removal
+besides ordering the rows lexicographically.
+Cases that are not listed have no $A2$s.}
+\end{table}
+
+\end{document}

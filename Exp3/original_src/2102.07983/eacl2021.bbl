@@ -1,0 +1,225 @@
+\begin{thebibliography}{30}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Basile et~al.(2014)Basile, Caputo, and Semeraro}]{basile2014enhanced}
+Pierpaolo Basile, Annalina Caputo, and Giovanni Semeraro. 2014.
+\newblock An enhanced lesk word sense disambiguation algorithm through a
+  distributional semantic model.
+\newblock In \emph{Proceedings of COLING 2014, the 25th International
+  Conference on Computational Linguistics: Technical Papers}, pages 1591--1600.
+
+\bibitem[{Bevilacqua and Navigli(2020)}]{bevilacqua2020breaking}
+Michele Bevilacqua and Roberto Navigli. 2020.
+\newblock Breaking through the 80\% glass ceiling: Raising the state of the art
+  in word sense disambiguation by incorporating knowledge graph information.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics}.
+
+\bibitem[{Blevins and Zettlemoyer(2020)}]{blevins2020moving}
+Terra Blevins and Luke Zettlemoyer. 2020.
+\newblock Moving down the long tail of word sense disambiguation with gloss
+  informed bi-encoders.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+  for Computational Linguistics}.
+
+\bibitem[{Devlin et~al.(2019)Devlin, Chang, Lee, and
+  Toutanova}]{devlin2019bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019.
+\newblock Bert: Pre-training of deep bidirectional transformers for language
+  understanding.
+\newblock In \emph{Proceedings of the 2019 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long and Short Papers)}, pages 4171--4186.
+
+\bibitem[{Henrich et~al.(2012)Henrich, Hinrichs, and
+  Vodolazova}]{henrich2012webcage}
+Verena Henrich, Erhard Hinrichs, and Tatiana Vodolazova. 2012.
+\newblock Webcage: a web-harvested corpus annotated with germanet senses.
+\newblock In \emph{Proceedings of the 13th Conference of the European Chapter
+  of the Association for Computational Linguistics}, pages 387--396.
+  Association for Computational Linguistics.
+
+\bibitem[{Huang et~al.(2019)Huang, Sun, Qiu, and Huang}]{huang2019glossbert}
+Luyao Huang, Chi Sun, Xipeng Qiu, and Xuan-Jing Huang. 2019.
+\newblock Glossbert: Bert for word sense disambiguation with gloss knowledge.
+\newblock In \emph{Proceedings of the 2019 Conference on Empirical Methods in
+  Natural Language Processing and the 9th International Joint Conference on
+  Natural Language Processing (EMNLP-IJCNLP)}, pages 3500--3505.
+
+\bibitem[{Kilgarriff(2004)}]{kilgarriff2004dominant}
+Adam Kilgarriff. 2004.
+\newblock How dominant is the commonest sense of a word?
+\newblock In \emph{International conference on text, speech and dialogue},
+  pages 103--111. Springer.
+
+\bibitem[{Kilgarriff and Rosenzweig(2000)}]{kilgarriff2000framework}
+Adam Kilgarriff and Joseph Rosenzweig. 2000.
+\newblock Framework and results for english senseval.
+\newblock \emph{Computers and the Humanities}, 34(1-2):15--48.
+
+\bibitem[{Kingma and Ba(2015)}]{kingma2015adam}
+Diederik~P. Kingma and Jimmy~Lei Ba. 2015.
+\newblock \href {https://arxiv.org/pdf/1412.6980} {Adam: {A} method for
+  stochastic optimization}.
+\newblock In \emph{Proceedings of 3rd International Conference of Learning
+  Representations}.
+
+\bibitem[{Kumar et~al.(2019)Kumar, Jat, Saxena, and Talukdar}]{kumar2019zero}
+Sawan Kumar, Sharmistha Jat, Karan Saxena, and Partha Talukdar. 2019.
+\newblock \href {https://doi.org/10.18653/v1/P19-1568} {Zero-shot word sense
+  disambiguation using sense definition embeddings}.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association
+  for Computational Linguistics}, pages 5670--5681, Florence, Italy.
+  Association for Computational Linguistics.
+
+\bibitem[{Loureiro and Camacho-Collados(2020)}]{loureiro2020neglect}
+Daniel Loureiro and Jose Camacho-Collados. 2020.
+\newblock \href {https://arxiv.org/pdf/2004.14325.pdf} {Don't neglect the
+  obvious: On the role of unambiguous words in word sense disambiguation}.
+\newblock \emph{arXiv preprint arXiv:2004.14325}.
+
+\bibitem[{Matuschek and Gurevych(2013)}]{matuschek2013tacl}
+Michael Matuschek and Iryna Gurevych. 2013.
+\newblock \href {https://doi.org/10.1162/tacl\_a\_00217} {Dijkstra-wsa: A
+  graph-based approach to word sense alignment}.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  1:151--164.
+
+\bibitem[{Meyer and Gurevych(2011)}]{meyer2011psycholinguists}
+Christian~M Meyer and Iryna Gurevych. 2011.
+\newblock What psycholinguists know about chemistry: Aligning wiktionary and
+  wordnet for increased domain coverage.
+\newblock In \emph{Proceedings of 5th International Joint Conference on Natural
+  Language Processing}, pages 883--892.
+
+\bibitem[{Mihalcea(2007)}]{mihalcea2007using}
+Rada Mihalcea. 2007.
+\newblock \href {https://www.aclweb.org/anthology/N07-1025} {Using {W}ikipedia
+  for automatic word sense disambiguation}.
+\newblock In \emph{Human Language Technologies 2007: The Conference of the
+  North {A}merican Chapter of the Association for Computational Linguistics;
+  Proceedings of the Main Conference}, pages 196--203, Rochester, New York.
+  Association for Computational Linguistics.
+
+\bibitem[{Miller et~al.(1993)Miller, Leacock, Tengi, and
+  Bunker}]{miller1993semantic}
+George~A Miller, Claudia Leacock, Randee Tengi, and Ross~T Bunker. 1993.
+\newblock A semantic concordance.
+\newblock In \emph{Proceedings of the workshop on Human Language Technology},
+  pages 303--308. Association for Computational Linguistics.
+
+\bibitem[{Miller and Gurevych(2014)}]{miller2014wordnet}
+Tristan Miller and Iryna Gurevych. 2014.
+\newblock \href {http://www.lrec-conf.org/proceedings/lrec2014/pdf/4_Paper.pdf}
+  {{W}ord{N}et{---}{W}ikipedia{---}{W}iktionary: Construction of a three-way
+  alignment}.
+\newblock In \emph{Proceedings of the Ninth International Conference on
+  Language Resources and Evaluation ({LREC}'14)}, pages 2094--2100, Reykjavik,
+  Iceland. European Language Resources Association (ELRA).
+
+\bibitem[{Moro and Navigli(2015)}]{moro2015semeval}
+Andrea Moro and Roberto Navigli. 2015.
+\newblock Semeval-2015 task 13: Multilingual all-words sense disambiguation and
+  entity linking.
+\newblock In \emph{Proceedings of the 9th international workshop on semantic
+  evaluation (SemEval 2015)}, pages 288--297.
+
+\bibitem[{Navigli(2009)}]{navigli2009word}
+Roberto Navigli. 2009.
+\newblock Word sense disambiguation: A survey.
+\newblock \emph{ACM computing surveys (CSUR)}, 41(2):10.
+
+\bibitem[{Navigli et~al.(2013)Navigli, Jurgens, and
+  Vannella}]{navigli2013semeval}
+Roberto Navigli, David Jurgens, and Daniele Vannella. 2013.
+\newblock Semeval-2013 task 12: Multilingual word sense disambiguation.
+\newblock In \emph{Second Joint Conference on Lexical and Computational
+  Semantics (* SEM), Volume 2: Proceedings of the Seventh International
+  Workshop on Semantic Evaluation (SemEval 2013)}, pages 222--231.
+
+\bibitem[{Navigli and Ponzetto(2012)}]{navigli2012babelnet}
+Roberto Navigli and Simone~Paolo Ponzetto. 2012.
+\newblock {B}abel{N}et: {T}he automatic construction, evaluation and
+  application of a wide-coverage multilingual semantic network.
+\newblock \emph{Artificial Intelligence}, 193:217--250.
+
+\bibitem[{Palmer et~al.(2001)Palmer, Fellbaum, Cotton, Delfs, and
+  Dang}]{palmer2001english}
+Martha Palmer, Christiane Fellbaum, Scott Cotton, Lauren Delfs, and Hoa~Trang
+  Dang. 2001.
+\newblock English tasks: All-words and verb lexical sample.
+\newblock In \emph{Proceedings of SENSEVAL-2 Second International Workshop on
+  Evaluating Word Sense Disambiguation Systems}, pages 21--24.
+
+\bibitem[{Pennington et~al.(2014)Pennington, Socher, and
+  Manning}]{pennington2014glove}
+Jeffrey Pennington, Richard Socher, and Christopher Manning. 2014.
+\newblock \href {https://doi.org/10.3115/v1/D14-1162} {Glove: Global vectors
+  for word representation}.
+\newblock In \emph{Proceedings of the 2014 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 1532--1543. Association for
+  Computational Linguistics.
+
+\bibitem[{Phang et~al.(2018)Phang, F{\'e}vry, and Bowman}]{phang2018sentence}
+Jason Phang, Thibault F{\'e}vry, and Samuel~R Bowman. 2018.
+\newblock \href {https://arxiv.org/pdf/1811.01088.pdf} {Sentence encoders on
+  stilts: Supplementary training on intermediate labeled-data tasks}.
+\newblock \emph{arXiv preprint arXiv:1811.01088}.
+
+\bibitem[{Postma et~al.(2016)Postma, Bevia, and Vossen}]{postma2016more}
+Marten Postma, Ruben~Izquierdo Bevia, and Piek Vossen. 2016.
+\newblock More is not always better: balancing sense distributions for
+  all-words word sense disambiguation.
+\newblock In \emph{Proceedings of COLING 2016, the 26th International
+  Conference on Computational Linguistics: Technical Papers}, pages 3496--3506.
+
+\bibitem[{Pradhan et~al.(2007{\natexlab{a}})Pradhan, Loper, Dligach, and
+  Palmer}]{pradhan2007semeval}
+Sameer Pradhan, Edward Loper, Dmitriy Dligach, and Martha Palmer.
+  2007{\natexlab{a}}.
+\newblock Semeval-2007 task-17: English lexical sample, srl and all words.
+\newblock In \emph{Proceedings of the fourth international workshop on semantic
+  evaluations (SemEval-2007)}, pages 87--92.
+
+\bibitem[{Pradhan et~al.(2007{\natexlab{b}})Pradhan, Hovy, Marcus, Palmer,
+  Ramshaw, and Weischedel}]{pradhan2007ontonotes}
+Sameer~S Pradhan, Eduard Hovy, Mitch Marcus, Martha Palmer, Lance Ramshaw, and
+  Ralph Weischedel. 2007{\natexlab{b}}.
+\newblock Ontonotes: A unified relational semantic representation.
+\newblock In \emph{International Conference on Semantic Computing (ICSC 2007)},
+  pages 517--526. IEEE.
+
+\bibitem[{Raganato et~al.(2017)Raganato, Camacho-Collados, and
+  Navigli}]{raganato2017word}
+Alessandro Raganato, Jose Camacho-Collados, and Roberto Navigli. 2017.
+\newblock Word sense disambiguation: A unified evaluation framework and
+  empirical comparison.
+\newblock In \emph{Proceedings of the 15th Conference of the European Chapter
+  of the Association for Computational Linguistics: Volume 1, Long Papers},
+  pages 99--110.
+
+\bibitem[{Segonne et~al.(2019)Segonne, Candito, and
+  Crabb{\'e}}]{segonne2019using}
+Vincent Segonne, Marie Candito, and Beno{\^\i}t Crabb{\'e}. 2019.
+\newblock \href {https://doi.org/10.18653/v1/W19-0422} {Using {W}iktionary as a
+  resource for {WSD} : the case of {F}rench verbs}.
+\newblock In \emph{Proceedings of the 13th International Conference on
+  Computational Semantics - Long Papers}, pages 259--270, Gothenburg, Sweden.
+  Association for Computational Linguistics.
+
+\bibitem[{Snyder and Palmer(2004)}]{snyder2004english}
+Benjamin Snyder and Martha Palmer. 2004.
+\newblock The english all-words task.
+\newblock In \emph{Proceedings of SENSEVAL-3, the Third International Workshop
+  on the Evaluation of Systems for the Semantic Analysis of Text}.
+
+\bibitem[{Wolf et~al.(2019)Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac,
+  Rault, Louf, Funtowicz, and Brew}]{Wolf2019HuggingFacesTS}
+Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue,
+  Anthony Moi, Pierric Cistac, Tim Rault, R'emi Louf, Morgan Funtowicz, and
+  Jamie Brew. 2019.
+\newblock Huggingface's transformers: State-of-the-art natural language
+  processing.
+\newblock \emph{ArXiv}, abs/1910.03771.
+
+\end{thebibliography}

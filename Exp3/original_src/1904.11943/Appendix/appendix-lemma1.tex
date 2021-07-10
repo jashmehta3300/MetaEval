@@ -1,0 +1,306 @@
+
+
+\section{Proof for Lemma~\ref{lemmaNoiseBall}}\label{sec:appendix-lemma}
+
+Let's start by analyzing an update step
+\[
+  w_{t+1} = Q_{\delta}\left( w_t - \alpha \nabla \tilde f_t(w_t) \right)
+\]
+where $\Exv{\tilde f_t} = f$ and $f$ is strongly convex with parameter $\mu$, Lipschitz continuous with parameter $L$, and has a global minimum at $w^*$.
+Further suppose that
+\[
+  \norm{ \nabla \tilde f_t(w) - \nabla f(w) } \le G
+\]
+for all $w \in \mathbb{R}^d$.
+
+\begin{customlemma}{\ref{lemmaNoiseBall}}
+  Under the above conditions, suppose that we run with step size
+  \[
+    \alpha
+    =
+    \sqrt{ \frac{\delta^2 d}{G^2} }
+  \]
+  and further suppose that $\delta$ is small enough that this step size satisfies
+  $(1 - 2 \alpha \mu + \alpha^2 L)^2 \le 1 - 2 \alpha \mu$ and $\alpha \mu < 1$.
+  Suppose that we run low-precision SGD for a number of time steps that is at least
+  \[
+    T
+    \ge
+    \frac{2 G}{\mu \delta \sqrt{d}} \log\left( \frac{\mu \norm{w_0 - w^*}^2}{44 G \delta \sqrt{d}} \right).
+  \]
+  Then
+  \[
+    \Exv{ \norm{w_T - w^*}^4 }
+    \le
+    \frac{44^2 G^2 \delta^2 d}{\mu^2}.
+  \]
+  \label{lemmaNewSingleIterBound}
+\end{customlemma}
+
+\begin{proof}
+We start by bounding the quantity we are interested in at the next time step with
+\begin{align*}
+  \norm{w_{t+1} - w^*}^4
+  &=
+  \norm{Q_{\delta}\left( w_t - \alpha \nabla \tilde f_t(w_t) \right) - w^*}^4 \\
+  &=
+  \norm{w_t - w^* - \alpha \nabla f(w_t) - \left(
+    w_t - \alpha \nabla \tilde f_t(w_t)
+    -
+    Q_{\delta}\left( w_t - \alpha \nabla \tilde f_t(w_t) \right)
+    +
+    \alpha \nabla \tilde f_t(w_t)
+    -
+    \alpha \nabla f(w_t)
+  \right) }^4.
+\end{align*}
+If we define
+\[
+  u_t
+  =
+  -\left(
+  w_t - \alpha \nabla \tilde f_t(w_t)
+  -
+  Q_{\delta}\left( w_t - \alpha \nabla \tilde f_t(w_t) \right)
+  +
+  \alpha \nabla \tilde f_t(w_t)
+  -
+  \alpha \nabla f(w_t)\right),
+\]
+then since we use unbiased rounding, $\Exv{u_t} = 0$.
+And so,
+\begin{align*}
+  \Exv{ \norm{w_{t+1} - w^*}^4 }
+  &=
+  \Exv{ \norm{w_t - w^* - \alpha \nabla f(w_t) + u_t }^4 } \\
+  &=
+  \Exv{ \norm{w_t - w^* - \alpha \nabla f(w_t) }^4 }
+  +
+  \Exv{ 4 \norm{w_t - w^* - \alpha \nabla f(w_t) }^2
+  u_t^T \left(w_t - w^* - \alpha \nabla f(w_t)\right) }
+  \\&\hspace{2em}+
+  \Exv{ 2 \norm{w_t - w^* - \alpha \nabla f(w_t) }^2 \norm{u_t}^2 }
+  +
+  \Exv{ 4 \left( u_t^T \left(w_t - w^* - \alpha \nabla f(w_t)\right) \right)^2 }
+  \\&\hspace{2em}+
+  \Exv{ 4 \norm{u_t}^2 u_t^T \left(w_t - w^* - \alpha \nabla f(w_t)\right) }
+  +
+  \Exv{ \norm{u_t}^4 } \\
+  &=
+  \Exv{ \norm{w_t - w^* - \alpha \nabla f(w_t) }^4 }
+  +
+  \Exv{ 2 \norm{w_t - w^* - \alpha \nabla f(w_t) }^2 \norm{u_t}^2 }
+  \\&\hspace{2em}+
+  \Exv{ 4 \left( u_t^T \left(w_t - w^* - \alpha \nabla f(w_t)\right) \right)^2 }
+  +
+  \Exv{ 4 \norm{u_t}^2 u_t^T \left(w_t - w^* - \alpha \nabla f(w_t)\right) }
+  +
+  \Exv{ \norm{u_t}^4 } \\
+  &\le
+  \Exv{ \norm{w_t - w^* - \alpha \nabla f(w_t) }^4 }
+  +
+  \Exv{ 6 \norm{w_t - w^* - \alpha \nabla f(w_t) }^2 \norm{u_t}^2 }
+  \\&\hspace{2em}+
+  \Exv{ 4 \norm{w_t - w^* - \alpha \nabla f(w_t) } \norm{u_t}^3 }
+  +
+  \Exv{ \norm{u_t}^4 }.
+\end{align*}
+From Holder's inequality, we know that
+\[
+  \Exv{X^m Y^n}
+  \le
+  \Exv{\Abs{X}^{m+n}}^{\frac{m}{m+n}} \Exv{\Abs{Y}^{m+n}}^{\frac{n}{m+n}},
+\]
+so
+\begin{align*}
+  \Exv{ \norm{w_{t+1} - w^*}^4 }
+  &\le
+  \Exv{ \norm{w_t - w^* - \alpha \nabla f(w_t) }^4 }
+  +
+  6 \Exv{ \norm{w_t - w^* - \alpha \nabla f(w_t) }^4 }^{\frac{1}{2}}
+  \Exv{ \norm{u_t}^4 }^{\frac{1}{2}}
+  \\&\hspace{2em}+
+  4 \Exv{ \norm{w_t - w^* - \alpha \nabla f(w_t) }^4 }^{\frac{1}{4}}
+  \Exv{ \norm{u_t}^4 }^{\frac{3}{4}}
+  +
+  \Exv{ \norm{u_t}^4 }.
+\end{align*}
+Now, it's a well known result for convex functions that
+\begin{align*}
+  \norm{w_t - w^* - \alpha \nabla f(w_t) }^2
+  &=
+  \norm{w_t - w^*}^2 
+  - 
+  2\alpha (w_t - w^*)^T \left( \nabla f(w_t) - \nabla f(w^*) \right)
+  +
+  \norm{ \nabla f(w_t) - \nabla f(w^*) }^2 \\
+  &\le
+  \norm{w_t - w^*}^2 
+  - 
+  2 \alpha \mu \norm{w_t - w^*}^2 
+  +
+  \alpha^2 L \norm{w_t - w^*}^2 \\
+  &=
+  (1 - 2 \alpha \mu + \alpha^2 L) \norm{w_t - w^*}^2,
+\end{align*}
+so
+\[
+  \norm{w_t - w^* - \alpha \nabla f(w_t) }^4
+  \le
+  (1 - 2 \alpha \mu + \alpha^2 L)^2 \norm{w_t - w^*}^4.
+\]
+On the other hand, we can bound the magnitude of $u$ with
+\begin{align*}
+  \norm{ u_t }
+  &=
+  \norm{ 
+    w_t - \alpha \nabla \tilde f_t(w_t)
+    -
+    Q_{\delta}\left( w_t - \alpha \nabla \tilde f_t(w_t) \right)
+    +
+    \alpha \nabla \tilde f_t(w_t)
+    -
+    \alpha \nabla f(w_t)
+    } \\
+  &\le
+  \norm{ 
+    w_t - \alpha \nabla \tilde f_t(w_t)
+    -
+    Q_{\delta}\left( w_t - \alpha \nabla \tilde f_t(w_t) \right)
+  }
+  +
+  \norm{
+    \alpha \nabla \tilde f_t(w_t)
+    -
+    \alpha \nabla f(w_t)
+  } \\
+  &\le
+  \delta \sqrt{d}
+  +
+  \alpha G.
+\end{align*}
+If we define $C = \delta \sqrt{d} + \alpha G$, then $\norm{ u_t } \le C$, and so
+\begin{align*}
+  \Exv{ \norm{w_{t+1} - w^*}^4 }
+  &\le
+  (1 - 2 \alpha \mu + \alpha^2 L)^2 \Exv{\norm{w_t - w^*}^4}
+  +
+  6 (1 - 2 \alpha \mu + \alpha^2 L) \Exv{\norm{w_t - w^*}^4}^{\frac{1}{2}}
+  C^2
+  \\&\hspace{2em}+
+  4 \sqrt{1 - 2 \alpha \mu + \alpha^2 L} \cdot \Exv{\norm{w_t - w^*}^4}^{\frac{1}{4}}
+  C^3
+  +
+  C^4 \\
+  &\le
+  (1 - 2 \alpha \mu + \alpha^2 L)^2 \Exv{\norm{w_t - w^*}^4}
+  +
+  6 C^2 \Exv{\norm{w_t - w^*}^4}^{\frac{1}{2}}
+  +
+  4 C^3 \Exv{\norm{w_t - w^*}^4}^{\frac{1}{4}}
+  +
+  C^4.
+\end{align*}
+Next, suppose we choose $\alpha$ small enough that $(1 - 2 \alpha \mu + \alpha^2 L)^2 \le 1 - 2 \alpha \mu$. Then,
+\begin{align*}
+  \Exv{ \norm{w_{t+1} - w^*}^4 }
+  &\le
+  (1 - 2 \alpha \mu) \Exv{\norm{w_t - w^*}^4}
+  +
+  6 C^2 \Exv{\norm{w_t - w^*}^4}^{\frac{1}{2}}
+  +
+  4 C^3 \Exv{\norm{w_t - w^*}^4}^{\frac{1}{4}}
+  +
+  C^4.
+\end{align*}
+Now, suppose that $\Exv{\norm{w_t - w^*}^4}$ is large enough that
+\[
+  \Exv{\norm{w_t - w^*}^4} \ge C^4.
+\]
+Then,
+\begin{align*}
+  \Exv{ \norm{w_{t+1} - w^*}^4 }
+  &\le
+  (1 - 2 \alpha \mu) \Exv{\norm{w_t - w^*}^4}
+  +
+  11 C^2 \Exv{\norm{w_t - w^*}^4}^{\frac{1}{2}}.
+\end{align*}
+And if we further suppose that $\Exv{\norm{w_t - w^*}^4}$ is large enough that
+\[
+  \alpha \mu \Exv{\norm{w_t - w^*}^4} \ge 11 C^2 \Exv{\norm{w_t - w^*}^4}^{\frac{1}{2}},
+\]
+which is equivalent to
+\[
+  \Exv{\norm{w_t - w^*}^4} \ge \left( \frac{11 C^2}{\alpha \mu} \right)^2,
+\]
+then
+\begin{align*}
+  \Exv{ \norm{w_{t+1} - w^*}^4 }
+  &\le
+  (1 - \alpha \mu) \Exv{\norm{w_t - w^*}^4}.
+\end{align*}
+So we've shown that $\Exv{ \norm{w_{t+1} - w^*}^4 }$ decreases exponentially until it no longer satisfies one of our two suppositions, which,  
+as long as $\alpha \mu < 11$, will be
+\[
+  \Exv{\norm{w_t - w^*}^4} \ge \left( \frac{11 C^2}{\alpha \mu} \right)^2.
+\]
+In other words, independently of any suppositions on the magnitude of $\Exv{ \norm{w_{t+1} - w^*}^4 }$ (but still assuming $\alpha \mu < 11$), it will hold that
+\begin{align*}
+  \Exv{ \norm{w_{t+1} - w^*}^4 }
+  &\le
+  (1 - \alpha \mu) \max\left( \Exv{\norm{w_t - w^*}^4}, \left( \frac{11 C^2}{\alpha \mu} \right)^2 \right).
+\end{align*}
+And applying this recursively,
+\begin{align*}
+  \Exv{ \norm{w_T - w^*}^4 }
+  &\le
+  \max\left( (1 - \alpha \mu)^T \norm{w_0 - w^*}^4, \left( \frac{11 C^2}{\alpha \mu} \right)^2 \right) \\
+  &\le
+  \max\left( \exp(- \alpha \mu T) \norm{w_0 - w^*}^4, \left( \frac{11 C^2}{\alpha \mu} \right)^2 \right).
+\end{align*}
+It follows that, as long as $T$ is large enough that
+\[
+  \exp(- \alpha \mu T) \norm{w_0 - w^*}^4 \le \left( \frac{11 C^2}{\alpha \mu} \right)^2,
+\]
+which will occur when
+\[
+  T \ge \frac{2}{\alpha \mu} \log\left( \frac{\alpha \mu \norm{w_0 - w^*}^2}{11 C^2} \right),
+\]
+we will get 
+\begin{align*}
+  \Exv{ \norm{w_T - w^*}^4 }
+  &\le
+  \left( \frac{11 C^2}{\alpha \mu} \right)^2.
+\end{align*}
+Next, we simplify this fraction.
+\begin{align*}
+  \frac{C^2}{\alpha \mu}
+  &=
+  \frac{\left( \delta \sqrt{d} + \alpha G \right)^2}{\alpha \mu}.
+\end{align*}
+If we set $\alpha = G^{-1} \delta \sqrt{d}$ then
+\begin{align*}
+  \frac{C^2}{\alpha \mu}
+  &=
+  \frac{\left( \delta \sqrt{d} + G^{-1} \delta \sqrt{d} \cdot G \right)^2}{G^{-1} \delta \sqrt{d} \mu} \\
+  &=
+  \frac{\left( 2 \delta \sqrt{d} \right)^2 \cdot G}{\delta \sqrt{d} \mu} \\
+  &=
+  \frac{4 G \delta \sqrt{d}}{\mu}.
+\end{align*}
+It follows that our bound on $T$ becomes
+\[
+  T \ge \frac{2 G}{\mu \delta \sqrt{d}} \log\left( \frac{\mu \norm{w_0 - w^*}^2}{44 G \delta \sqrt{d}} \right),
+\]
+and our bound on $\Exv{ \norm{w_T - w^*}^4 }$ becomes
+\begin{align*}
+  \Exv{ \norm{w_T - w^*}^4 }
+  &\le
+  \left( \frac{44 G \delta \sqrt{d}}{\mu} \right)^2 \\
+  &=
+  \frac{44^2 G^2 \delta^2 d}{\mu^2}.
+\end{align*}
+This is what we wanted to prove.
+\end{proof}
+
+\newpage

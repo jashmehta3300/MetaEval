@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  5 JUL 2021 07:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  7 JUL 2021 21:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -398,6 +398,11 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 5
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
+Underfull \hbox (badness 1430) in paragraph at lines 58--59
+[]\OT1/ptm/m/n/10 We an-a-lyze the na-ture of these cues and
+ []
+
+
 Overfull \hbox (6.75221pt too wide) in paragraph at lines 79--79
 []\OT1/ptm/b/n/9 Alternative| 
  []
@@ -446,6 +451,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--149
 [][][][][]\OT1/ptm/m/n/9 https://github.com/huggingface/pytorch-pretrained-
  []
 
+
+Underfull \vbox (badness 1960) has occurred while \output is active []
+
 [2 <./modified_src/1907.07355//ARCT_ARCHITECTURE.png>]
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 1
 57.
@@ -454,10 +462,7 @@ Overfull \hbox (13.25713pt too wide) detected at line 166
 []
  []
 
-[3 <./modified_src/1907.07355//BERT_ARCT.png>]
-Underfull \vbox (badness 1917) has occurred while \output is active []
-
-
+[3 <./modified_src/1907.07355//BERT_ARCT.png>] [4]
 Underfull \hbox (badness 1728) in paragraph at lines 249--250
 \OT1/ptm/m/n/10 ([][]Choi and Lee[][], [][]2018[][]; [][]Zhao et al.[][], [][]2
 018[][];
@@ -468,10 +473,7 @@ Underfull \hbox (badness 2261) in paragraph at lines 249--250
 [][]\OT1/ptm/m/n/10 2017[][]), and uti-lized ef-fec-tive NLI mod-els
  []
 
-[4] (./modified_src/1907.07355//acl2019.bbl
-Underfull \vbox (badness 3019) has occurred while \output is active []
-
-[5]
+[5] (./modified_src/1907.07355//acl2019.bbl
 Underfull \hbox (badness 1515) in paragraph at lines 24--28
 \OT1/ptm/m/n/10 and com-bin-ing se-quen-tial and tree LSTM
  []
@@ -578,7 +580,7 @@ Package rerunfilecheck Info: File `acl2019.out' has not changed.
 Here is how much of TeX's memory you used:
  11311 strings out of 478994
  168934 string characters out of 5858184
- 495523 words of memory out of 5000000
+ 494523 words of memory out of 5000000
  28538 multiletter control sequences out of 15000+600000
  434013 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -606,7 +608,7 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf
 nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on ./modified_src/1907.07355//acl2019.pdf (7 pages, 280724 bytes
+Output written on ./modified_src/1907.07355//acl2019.pdf (7 pages, 280896 bytes
 ).
 PDF statistics:
  338 PDF objects out of 1000 (max. 8388607)

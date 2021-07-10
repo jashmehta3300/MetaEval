@@ -19,7 +19,7 @@ if __name__ == '__main__':
     paper_list = Get_Id()
 
     # download_latex(paper_list, './original_src', './original_pdf')
-    download_latex(paper_list, './modified_src', './modified_pdf')
+    download_latex(paper_list, './modified_src_1', './modified_pdf_1')
 
     info = get_abstract(paper_list)
     # with open('./data.json', 'w', encoding='utf-8') as f:
@@ -34,20 +34,20 @@ if __name__ == '__main__':
     ids = [i["paper_id"] for i in info]
     abs = [i["abstract"] for i in info]
 
-    no_of_shuffles = 3
+    no_of_shuffles = 5
 
     for j in range(no_of_shuffles):
 
         for i in range(len(ids)):
-            file_in_abs = shuffle_abs_asc(ids[i], "./modified_src", abs[i])
+            file_in_abs = shuffle_abs_asc(ids[i], "./modified_src_1", abs[i])
             print(file_in_abs)
-            files = glob.glob(f"./modified_src/{ids[i]}/*.tex")
+            files = glob.glob(f"./modified_src_1/{ids[i]}/*.tex")
             for file in files: 
             # if file_in_abs is not None:
                 try:
                     # latex command is used for compilation
                     proc = subprocess.run(["pdflatex",
-                                        "-output-directory={}".format(f"./modified_src/{ids[i]}/"),
+                                        "-output-directory={}".format(f"./modified_src_1/{ids[i]}/"),
                                         "-interaction=batchmode",
                                         "-output-format=pdf",
                                         "-silent",
@@ -67,12 +67,12 @@ if __name__ == '__main__':
                 pdf_file = grp.group(2) + ".pdf"
                 print(pdf_file)
                 cp_pdf = subprocess.run(["cp",
-                                        f"./modified_src/{ids[i]}/{pdf_file}",
-                                        f"./modified_pdf/{ids[i]}/"])
+                                        f"./modified_src_1/{ids[i]}/{pdf_file}",
+                                        f"./modified_pdf_1/{ids[i]}/"])
 
         Reviews(paper_list, './reviews/reviews_asc.txt', 1)
     
-        download_latex(paper_list, './modified_src', './modified_pdf')
+        download_latex(paper_list, './modified_src_1', './modified_pdf_1')
 
     # Plot_Distances(paper_list, "./reviews/", "./results/")
 

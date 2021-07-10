@@ -1,0 +1,24 @@
+\section{Combining SWALP with low-precision training method}\label{sec:wage-swalp}
+In Section~\ref{sec:related}, we introduce SWALP as an orthogonal approach to recent low-precision training algorithms. In this section, we explore the possibility of combining SWALP with a state-of-the-art low-precision model, WAGE~\cite{WAGE}. 
+We evaluate the performance of SWALP and that of the modified low-precision SGD by training the WAGE network on CIFAR10 \cite{WAGE}. 
+Originally, WAGE is trained with learning rate $8$ for the first 200 epochs and decay to $1$ at the 200 epochs, and to $0.125$ at the 250 epochs. Based on a held-out validation set, we find the learning rate schedule for SWALP. 
+Specifically, we use a constant learning rate $8$ for the first 200 epochs and start SWALP at 250 epochs with a constant SWA learning rate $6$ and averaging frequency $c=1$. 
+We keep other hyper-parameters and training procedures unchanged.
+During inference, we use the full precision average as the weight in forward propagation and keep activations in 8 bits by following WAGE's quantization scheme.
+We denote the WAGE network trained with SWALP, WAGE-SWALP, and report its test error rate on CIFAR10 in Table~\ref{tab:wage-swalp}. 
+Due to the customized scaling in WAGE, it is nontrivial to train WAGE with full precision and we therefore omit the comparison with full precision baseline. 
+Table~\ref{tab:wage-swalp} shows that SWALP can be combined with the existing low-precision training algorithm positively. We also note that SWALP requires little modification on the network structure and hyper-parameters except a different learning rate schedule.
+
+\begin{table}[H]
+    \centering
+    \captionsetup{justification=centering}
+    \caption{Test Error (\%) on CIFAR10. SWALP has positive interaction with state-of-the-art low-precision training algorithm.}
+    \begin{tabular}{cc}
+        \toprule
+        Model & Test Error  \\
+        \midrule
+        WAGE~\cite{WAGE} & 6.78 \\
+        WAGE-SWALP & 6.35 $\pm{0.04}$ \\
+        \bottomrule
+    \end{tabular}\label{tab:wage-swalp}
+\end{table}

@@ -1,0 +1,50 @@
+\onecolumn
+
+\begin{appendices}
+
+\newtheorem{innercustomgeneric}{\customgenericname}
+\providecommand{\customgenericname}{}
+\newcommand{\newcustomtheorem}[2]{%
+  \newenvironment{#1}[1]
+  {%
+   \renewcommand\customgenericname{#2}%
+   \renewcommand\theinnercustomgeneric{##1}%
+   \innercustomgeneric
+  }
+  {\endinnercustomgeneric}
+}
+
+\newcustomtheorem{customthm}{Theorem}
+\newcustomtheorem{customlemma}{Lemma}
+
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\R}[0]{\mathbb{R}}
+\newcommand{\Prob}[1]{\mathbf{P}\left( #1 \right) }
+\newcommand{\Exv}[1]{\mathbb{E}\left[ #1 \right]}
+\newcommand{\Exvud}[2]{\mathbb{E}_{#1}\left[ #2 \right]}
+% \newcommand*{\Exv}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\Abs}[1]{\left| #1 \right| }
+
+% \nipsfinalcopy is no longer used
+% \maketitle
+\section{Overview}
+The appendix will contain full proofs for all theorems and lemmas in the main paper, implementation details for all the experiments, statistics for the figures, and some additional results combining SWALP with other methods.
+The proof for Theorem~\ref{thm:quadratic} will be presented in Sec~\ref{sec:appendix-thm-quadratic}. 
+The proof for Lemma~\ref{lemmaNoiseBall} will be presented in Sec~\ref{sec:appendix-lemma}.
+The proof for Theorem~\ref{thm:SWALP} will be shown in Sec~\ref{sec:thm4.3}.
+The proof for Theorem~\ref{thm:lower-bound} will be shown in Sec~\ref{sec:thm-lowerbound}.
+The implementation details of the linear regression and the logistic regression experiments will be in Sec~\ref{sec:linreg} and Sec~\ref{sec:logreg} respectively.
+The implementation details for deep learning experiments will be presented in Sec~\ref{sec:dlexp}.
+We show results combining SWALP with WAGE~\cite{WAGE} in Sec~\ref{sec:wage-swalp}.
+In the rest sections, we will provide numbers used for the figure.
+
+\input{Appendix/appendix-thm1.tex}
+\input{Appendix/appendix-lemma1.tex}
+\input{Appendix/appendix-thm2.tex}
+\input{Appendix/appendix-lowerbound.tex}
+\input{Appendix/appendix-wage.tex}
+\input{Appendix/appendix-impl.tex}
+
+\end{appendices}

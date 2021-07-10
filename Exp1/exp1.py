@@ -18,7 +18,7 @@ import json
 if __name__ == '__main__':
     paper_list = Get_Id()
 
-    # download_latex(paper_list, './original_src', './original_pdf')
+    download_latex(paper_list, './original_src', './original_pdf')
     download_latex(paper_list, './modified_src', './modified_pdf')
 
     info = get_abstract(paper_list)
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     with open('./embeddings.json', 'w', encoding='utf-8') as f:
         json.dump(embeddings, f, ensure_ascii=False, indent=4)
 
-    # Download_PDF(paper_list, "./original_pdf/")
+    Download_PDF(paper_list, "./original_pdf/")
 
     ids = [i["paper_id"] for i in info]
     abs = [i["abstract"] for i in info]

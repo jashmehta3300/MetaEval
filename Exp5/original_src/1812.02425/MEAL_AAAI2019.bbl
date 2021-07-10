@@ -1,0 +1,277 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Anil \bgroup et al\mbox.\egroup
+  }{2018}]{anil2018large}
+Anil, R.; Pereyra, G.; Passos, A.; Ormandi, R.; Dahl, G.~E.; and Hinton, G.~E.
+\newblock 2018.
+\newblock Large scale distributed neural network training through online
+  distillation.
+\newblock In {\em ICLR}.
+
+\bibitem[\protect\citeauthoryear{Bagherinezhad \bgroup et al\mbox.\egroup
+  }{2018}]{bagherinezhad2018label}
+Bagherinezhad, H.; Horton, M.; Rastegari, M.; and Farhadi, A.
+\newblock 2018.
+\newblock Label refinery: Improving imagenet classification through label
+  progression.
+\newblock In {\em ECCV}.
+
+\bibitem[\protect\citeauthoryear{Bai \bgroup et al\mbox.\egroup
+  }{2018}]{bai2018finding}
+Bai, Y.; Zhang, Y.; Ding, M.; and Ghanem, B.
+\newblock 2018.
+\newblock Finding tiny faces in the wild with generative adversarial network.
+
+\bibitem[\protect\citeauthoryear{Chen, Goodfellow, and
+  Shlens}{2016}]{chen2015net2net}
+Chen, T.; Goodfellow, I.; and Shlens, J.
+\newblock 2016.
+\newblock Net2net: Accelerating learning via knowledge transfer.
+\newblock In {\em ICLR}.
+
+\bibitem[\protect\citeauthoryear{Deng \bgroup et al\mbox.\egroup
+  }{2009}]{deng2009imagenet}
+Deng, J.; Dong, W.; Socher, R.; Li, L.-J.; et~al.
+\newblock 2009.
+\newblock Imagenet: A large-scale hierarchical image database.
+\newblock In {\em CVPR}.
+
+\bibitem[\protect\citeauthoryear{Dietterich}{2000}]{dietterich2000ensemble}
+Dietterich, T.~G.
+\newblock 2000.
+\newblock Ensemble methods in machine learning.
+\newblock In {\em International workshop on multiple classifier systems},
+  1--15.
+
+\bibitem[\protect\citeauthoryear{Gastaldi}{2017}]{gastaldi2017shake}
+Gastaldi, X.
+\newblock 2017.
+\newblock Shake-shake regularization.
+\newblock {\em arXiv preprint arXiv:1705.07485}.
+
+\bibitem[\protect\citeauthoryear{Goodfellow \bgroup et al\mbox.\egroup
+  }{2013}]{goodfellow2013maxout}
+Goodfellow, I.~J.; Warde-Farley, D.; Mirza, M.; Courville, A.; and Bengio, Y.
+\newblock 2013.
+\newblock Maxout networks.
+\newblock In {\em ICML}.
+
+\bibitem[\protect\citeauthoryear{Goodfellow \bgroup et al\mbox.\egroup
+  }{2014}]{goodfellow2014generative}
+Goodfellow, I.; Pouget-Abadie, J.; Mirza, M.; Xu, B.; Warde-Farley, D.; Ozair,
+  S.; Courville, A.; and Bengio, Y.
+\newblock 2014.
+\newblock Generative adversarial nets.
+\newblock In {\em NIPS}.
+
+\bibitem[\protect\citeauthoryear{Hansen and Salamon}{1990}]{hansen1990neural}
+Hansen, L.~K., and Salamon, P.
+\newblock 1990.
+\newblock Neural network ensembles.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence}
+  12(10):993--1001.
+
+\bibitem[\protect\citeauthoryear{He \bgroup et al\mbox.\egroup
+  }{2016}]{he2016deep}
+He, K.; Zhang, X.; Ren, S.; and Sun, J.
+\newblock 2016.
+\newblock Deep residual learning for image recognition.
+\newblock In {\em CVPR}.
+
+\bibitem[\protect\citeauthoryear{Hinton, Vinyals, and
+  Dean}{2015}]{hinton2015distilling}
+Hinton, G.; Vinyals, O.; and Dean, J.
+\newblock 2015.
+\newblock Distilling the knowledge in a neural network.
+\newblock {\em arXiv preprint arXiv:1503.02531}.
+
+\bibitem[\protect\citeauthoryear{Howard \bgroup et al\mbox.\egroup
+  }{2017}]{howard2017mobilenets}
+Howard, A.~G.; Zhu, M.; Chen, B.; Kalenichenko, D.; Wang, W.; Weyand, T.;
+  Andreetto, M.; and Adam, H.
+\newblock 2017.
+\newblock Mobilenets: Efficient convolutional neural networks for mobile vision
+  applications.
+\newblock {\em arXiv preprint arXiv:1704.04861}.
+
+\bibitem[\protect\citeauthoryear{Huang \bgroup et al\mbox.\egroup
+  }{2016}]{huang2016deep}
+Huang, G.; Sun, Y.; Liu, Z.; Sedra, D.; and Weinberger, K.~Q.
+\newblock 2016.
+\newblock Deep networks with stochastic depth.
+\newblock In {\em ECCV}.
+
+\bibitem[\protect\citeauthoryear{Huang \bgroup et al\mbox.\egroup
+  }{2017a}]{huang2017snapshot}
+Huang, G.; Li, Y.; Pleiss, G.; Liu, Z.; Hopcroft, J.~E.; and Weinberger, K.~Q.
+\newblock 2017a.
+\newblock Snapshot ensembles: Train 1, get m for free.
+\newblock In {\em ICLR}.
+
+\bibitem[\protect\citeauthoryear{Huang \bgroup et al\mbox.\egroup
+  }{2017b}]{huang2016densely}
+Huang, G.; Liu, Z.; Weinberger, K.~Q.; and van~der Maaten, L.
+\newblock 2017b.
+\newblock Densely connected convolutional networks.
+\newblock In {\em CVPR}.
+
+\bibitem[\protect\citeauthoryear{Ioffe and Szegedy}{2015}]{ioffe2015batch}
+Ioffe, S., and Szegedy, C.
+\newblock 2015.
+\newblock Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift.
+\newblock {\em arXiv preprint arXiv:1502.03167}.
+
+\bibitem[\protect\citeauthoryear{Johnson, Gupta, and
+  Fei-Fei}{2018}]{johnson2018image}
+Johnson, J.; Gupta, A.; and Fei-Fei, L.
+\newblock 2018.
+\newblock Image generation from scene graphs.
+\newblock In {\em CVPR}.
+
+\bibitem[\protect\citeauthoryear{Krizhevsky, Sutskever, and
+  Hinton}{2012}]{krizhevsky2012imagenet}
+Krizhevsky, A.; Sutskever, I.; and Hinton, G.
+\newblock 2012.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em NIPS}.
+
+\bibitem[\protect\citeauthoryear{Krizhevsky}{2009}]{krizhevsky2009learning}
+Krizhevsky, A.
+\newblock 2009.
+\newblock Learning multiple layers of features from tiny images.
+\newblock Technical report.
+
+\bibitem[\protect\citeauthoryear{Krogh and Vedelsby}{1995}]{krogh1995neural}
+Krogh, A., and Vedelsby, J.
+\newblock 1995.
+\newblock Neural network ensembles, cross validation, and active learning.
+\newblock In {\em NIPS}.
+
+\bibitem[\protect\citeauthoryear{Lakshminarayanan, Pritzel, and
+  Blundell}{2017}]{lakshminarayanan2017simple}
+Lakshminarayanan, B.; Pritzel, A.; and Blundell, C.
+\newblock 2017.
+\newblock Simple and scalable predictive uncertainty estimation using deep
+  ensembles.
+\newblock In {\em NIPS}.
+
+\bibitem[\protect\citeauthoryear{Larsson, Maire, and
+  Shakhnarovich}{2016}]{larsson2016fractalnet}
+Larsson, G.; Maire, M.; and Shakhnarovich, G.
+\newblock 2016.
+\newblock Fractalnet: Ultra-deep neural networks without residuals.
+\newblock {\em arXiv preprint arXiv:1605.07648}.
+
+\bibitem[\protect\citeauthoryear{Lee \bgroup et al\mbox.\egroup
+  }{2015}]{lee2015deeply}
+Lee, C.-Y.; Xie, S.; Gallagher, P.~W.; et~al.
+\newblock 2015.
+\newblock Deeply-supervised nets.
+\newblock In {\em AISTATS}.
+
+\bibitem[\protect\citeauthoryear{Li \bgroup et al\mbox.\egroup
+  }{2017}]{li2017learning}
+Li, Y.; Yang, J.; Song, Y.; Cao, L.; Luo, J.; and Li, L.-J.
+\newblock 2017.
+\newblock Learning from noisy labels with distillation.
+\newblock In {\em ICCV}.
+
+\bibitem[\protect\citeauthoryear{Liu \bgroup et al\mbox.\egroup
+  }{2017}]{liu2017learning}
+Liu, Z.; Li, J.; Shen, Z.; Huang, G.; Yan, S.; and Zhang, C.
+\newblock 2017.
+\newblock Learning efficient convolutional networks through network slimming.
+\newblock In {\em ICCV}.
+
+\bibitem[\protect\citeauthoryear{Maaten and
+  Hinton}{2008}]{maaten2008visualizing}
+Maaten, L. v.~d., and Hinton, G.
+\newblock 2008.
+\newblock Visualizing data using t-sne.
+\newblock {\em Journal of machine learning research} 9(Nov):2579--2605.
+
+\bibitem[\protect\citeauthoryear{Netzer \bgroup et al\mbox.\egroup
+  }{2011}]{netzer2011reading}
+Netzer, Y.; Wang, T.; Coates, A.; Bissacco, A.; Wu, B.; and Ng, A.~Y.
+\newblock 2011.
+\newblock Reading digits in natural images with unsupervised feature learning.
+\newblock In {\em NIPS workshop on deep learning and unsupervised feature
+  learning}, volume 2011, ~5.
+
+\bibitem[\protect\citeauthoryear{Papernot \bgroup et al\mbox.\egroup
+  }{2017}]{papernot2016semi}
+Papernot, N.; Abadi, M.; Erlingsson, U.; Goodfellow, I.; and Talwar, K.
+\newblock 2017.
+\newblock Semi-supervised knowledge transfer for deep learning from private
+  training data.
+\newblock In {\em ICLR}.
+
+\bibitem[\protect\citeauthoryear{Paszke \bgroup et al\mbox.\egroup
+  }{2017}]{paszke2017automatic}
+Paszke, A.; Gross, S.; Chintala, S.; Chanan, G.; Yang, E.; DeVito, Z.; Lin, Z.;
+  Desmaison, A.; Antiga, L.; and Lerer, A.
+\newblock 2017.
+\newblock Automatic differentiation in pytorch.
+
+\bibitem[\protect\citeauthoryear{Perrone and
+  Cooper}{1995}]{perrone1995networks}
+Perrone, M.~P., and Cooper, L.~N.
+\newblock 1995.
+\newblock When networks disagree: Ensemble methods for hybrid neural networks.
+\newblock In {\em How We Learn; How We Remember: Toward an Understanding of
+  Brain and Neural Systems: Selected Papers of Leon N Cooper}. World
+  Scientific.
+\newblock  342--358.
+
+\bibitem[\protect\citeauthoryear{Romero \bgroup et al\mbox.\egroup
+  }{2015}]{romero2015fitnets}
+Romero, A.; Ballas, N.; Kahou, S.~E.; Chassang, A.; Gatta, C.; and Bengio, Y.
+\newblock 2015.
+\newblock Fitnets: Hints for thin deep nets.
+\newblock In {\em ICLR}.
+
+\bibitem[\protect\citeauthoryear{Simonyan and
+  Zisserman}{2015}]{simonyan2014very}
+Simonyan, K., and Zisserman, A.
+\newblock 2015.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock In {\em ICLR}.
+
+\bibitem[\protect\citeauthoryear{Singh, Hoiem, and
+  Forsyth}{2016}]{singh2016swapout}
+Singh, S.; Hoiem, D.; and Forsyth, D.
+\newblock 2016.
+\newblock Swapout: Learning an ensemble of deep architectures.
+\newblock In {\em Advances in neural information processing systems},  28--36.
+
+\bibitem[\protect\citeauthoryear{Srivastava \bgroup et al\mbox.\egroup
+  }{2014}]{srivastava2014dropout}
+Srivastava, N.; Hinton, G.~E.; Krizhevsky, A.; et~al.
+\newblock 2014.
+\newblock Dropout: a simple way to prevent neural networks from overfitting.
+\newblock {\em JMLR}.
+
+\bibitem[\protect\citeauthoryear{Szegedy \bgroup et al\mbox.\egroup
+  }{2015}]{szegedy2015going}
+Szegedy, C.; Liu, W.; Jia, Y.; Sermanet, P.; et~al.
+\newblock 2015.
+\newblock Going deeper with convolutions.
+\newblock In {\em CVPR}.
+
+\bibitem[\protect\citeauthoryear{Wan \bgroup et al\mbox.\egroup
+  }{2013}]{wan2013regularization}
+Wan, L.; Zeiler, M.; Zhang, S.; Le~Cun, Y.; and Fergus, R.
+\newblock 2013.
+\newblock Regularization of neural networks using dropconnect.
+\newblock In {\em ICML}.
+
+\bibitem[\protect\citeauthoryear{Yim \bgroup et al\mbox.\egroup
+  }{2017}]{yim2017gift}
+Yim, J.; Joo, D.; Bae, J.; and Kim, J.
+\newblock 2017.
+\newblock A gift from knowledge distillation: Fast optimization, network
+  minimization and transfer learning.
+\newblock In {\em CVPR}.
+
+\end{thebibliography}

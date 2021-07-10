@@ -1,0 +1,159 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Bahdanau \bgroup \em et al.\egroup
+  }{2014}]{bahdanau2014neural}
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio.
+\newblock Neural machine translation by jointly learning to align and
+  translate.
+\newblock {\em arXiv preprint arXiv:1409.0473}, 2014.
+
+\bibitem[\protect\citeauthoryear{Cho \bgroup \em et al.\egroup
+  }{2014a}]{cho2014properties}
+Kyunghyun Cho, Bart van Merrienboer, Dzmitry Bahdanau, and Yoshua Bengio.
+\newblock On the properties of neural machine translation: Encoder-decoder
+  approaches.
+\newblock In {\em Eighth Workshop on Syntax, Semantics and Structure in
+  Statistical Translation}, pages 103--111, 2014.
+
+\bibitem[\protect\citeauthoryear{Cho \bgroup \em et al.\egroup
+  }{2014b}]{cho2014learning}
+Kyunghyun Cho, Bart van Merrienboer, {\c{C}}aglar G{\"{u}}l{\c{c}}ehre, Dzmitry
+  Bahdanau, Fethi Bougares, Holger Schwenk, and Yoshua Bengio.
+\newblock Learning phrase representations using {RNN} encoder-decoder for
+  statistical machine translation.
+\newblock In {\em Proceedings of the 2014 Conference on Empirical Methods in
+  Natural Language Processing}, pages 1724--1734, 2014.
+
+\bibitem[\protect\citeauthoryear{Dinan \bgroup \em et al.\egroup
+  }{2018}]{dinan2018wizard}
+Emily Dinan, Stephen Roller, Kurt Shuster, Angela Fan, Michael Auli, and Jason
+  Weston.
+\newblock Wizard of wikipedia: Knowledge-powered conversational agents.
+\newblock {\em arXiv preprint arXiv:1811.01241}, 2018.
+
+\bibitem[\protect\citeauthoryear{Dinan \bgroup \em et al.\egroup
+  }{2019}]{dinan2019second}
+Emily Dinan, Varvara Logacheva, Valentin Malykh, Alexander Miller, Kurt
+  Shuster, Jack Urbanek, Douwe Kiela, Arthur Szlam, Iulian Serban, Ryan Lowe,
+  et~al.
+\newblock The second conversational intelligence challenge.
+\newblock {\em arXiv preprint arXiv:1902.00098}, 2019.
+
+\bibitem[\protect\citeauthoryear{Fleiss}{1971}]{fleiss1971measuring}
+Joseph~L Fleiss.
+\newblock Measuring nominal scale agreement among many raters.
+\newblock {\em Psychological bulletin}, page 378, 1971.
+
+\bibitem[\protect\citeauthoryear{Ghazvininejad \bgroup \em et al.\egroup
+  }{2018}]{ghazvininejad2018knowledge}
+Marjan Ghazvininejad, Chris Brockett, Ming-Wei Chang, Bill Dolan, Jianfeng Gao,
+  Wen-tau Yih, and Michel Galley.
+\newblock A knowledge-grounded neural conversation model.
+\newblock In {\em Thirty-Second AAAI Conference on Artificial Intelligence},
+  2018.
+
+\bibitem[\protect\citeauthoryear{Gu \bgroup \em et al.\egroup
+  }{2016}]{gu2016incorporating}
+Jiatao Gu, Zhengdong Lu, Hang Li, and Victor O.~K. Li.
+\newblock Incorporating copying mechanism in sequence-to-sequence learning.
+\newblock In {\em Proceedings of the 54th Annual Meeting of the Association for
+  Computational Linguistics}, 2016.
+
+\bibitem[\protect\citeauthoryear{Jang \bgroup \em et al.\egroup
+  }{2016}]{jang2016categorical}
+Eric Jang, Shixiang Gu, and Ben Poole.
+\newblock Categorical reparameterization with gumbel-softmax.
+\newblock {\em arXiv preprint arXiv:1611.01144}, 2016.
+
+\bibitem[\protect\citeauthoryear{Li \bgroup \em et al.\egroup
+  }{2016}]{li2016diversity}
+Jiwei Li, Michel Galley, Chris Brockett, Jianfeng Gao, and Bill Dolan.
+\newblock A diversity-promoting objective function for neural conversation
+  models.
+\newblock In {\em The 2016 Conference of the North American Chapter of the
+  Association for Computational Linguistics}, pages 110--119, 2016.
+
+\bibitem[\protect\citeauthoryear{Liu \bgroup \em et al.\egroup
+  }{2018}]{liu2018knowledge}
+Shuman Liu, Hongshen Chen, Zhaochun Ren, Yang Feng, Qun Liu, and Dawei Yin.
+\newblock Knowledge diffusion for neural dialogue generation.
+\newblock In {\em Proceedings of the 56th Annual Meeting of the Association for
+  Computational Linguistics}, pages 1489--1498, 2018.
+
+\bibitem[\protect\citeauthoryear{Long \bgroup \em et al.\egroup
+  }{2017}]{long2017knowledge}
+Yinong Long, Jianan Wang, Zhen Xu, Zongsheng Wang, Baoxun Wang, and Zhuoran
+  Wang.
+\newblock A knowledge enhanced generative conversational service agent.
+\newblock In {\em Proceedings of the 6th Dialog System Technology Challenges
+  (DSTC6) Workshop}, 2017.
+
+\bibitem[\protect\citeauthoryear{Pennington \bgroup \em et al.\egroup
+  }{2014}]{pennington2014glove}
+Jeffrey Pennington, Richard Socher, and Christopher Manning.
+\newblock Glove: Global vectors for word representation.
+\newblock In {\em Proceedings of the 2014 conference on empirical methods in
+  natural language processing}, pages 1532--1543, 2014.
+
+\bibitem[\protect\citeauthoryear{Shang \bgroup \em et al.\egroup
+  }{2015}]{shang2015neural}
+Lifeng Shang, Zhengdong Lu, and Hang Li.
+\newblock Neural responding machine for short-text conversation.
+\newblock In {\em Proceedings of the 53rd Annual Meeting of the Association for
+  Computational Linguistics and the 7th International Joint Conference on
+  Natural Language Processing of the Asian Federation of Natural Language
+  Processing}, pages 1577--1586, 2015.
+
+\bibitem[\protect\citeauthoryear{Vinyals and Le}{2015}]{vinyals2015neural}
+Oriol Vinyals and Quoc Le.
+\newblock A neural conversational model.
+\newblock {\em arXiv preprint arXiv:1506.05869}, 2015.
+
+\bibitem[\protect\citeauthoryear{Xu \bgroup \em et al.\egroup
+  }{2017}]{xu2017incorporating}
+Zhen Xu, Bingquan Liu, Baoxun Wang, Chengjie Sun, and Xiaolong Wang.
+\newblock Incorporating loose-structured knowledge into conversation modeling
+  via recall-gate {LSTM}.
+\newblock In {\em 2017 International Joint Conference on Neural Networks},
+  pages 3506--3513, 2017.
+
+\bibitem[\protect\citeauthoryear{Yao \bgroup \em et al.\egroup
+  }{2017}]{yao2017towards}
+Lili Yao, Yaoyuan Zhang, Yansong Feng, Dongyan Zhao, and Rui Yan.
+\newblock Towards implicit content-introducing for generative short-text
+  conversation systems.
+\newblock In {\em Proceedings of the 2017 Conference on Empirical Methods in
+  Natural Language Processing}, pages 2190--2199, 2017.
+
+\bibitem[\protect\citeauthoryear{Zhang \bgroup \em et al.\egroup
+  }{2018}]{zhang2018personalizing}
+Saizheng Zhang, Emily Dinan, Jack Urbanek, Arthur Szlam, Douwe Kiela, and Jason
+  Weston.
+\newblock Personalizing dialogue agents: {I} have a dog, do you have pets too?
+\newblock In {\em Proceedings of the 56th Annual Meeting of the Association for
+  Computational Linguistics}, pages 2204--2213, 2018.
+
+\bibitem[\protect\citeauthoryear{Zhao \bgroup \em et al.\egroup
+  }{2017}]{zhao2017learning}
+Tiancheng Zhao, Ran Zhao, and Maxine Esk{\'{e}}nazi.
+\newblock Learning discourse-level diversity for neural dialog models using
+  conditional variational autoencoders.
+\newblock In {\em Proceedings of the 55th Annual Meeting of the Association for
+  Computational Linguistics}, pages 654--664, 2017.
+
+\bibitem[\protect\citeauthoryear{Zhou \bgroup \em et al.\egroup
+  }{2018}]{zhou2018commonsense}
+Hao Zhou, Tom Young, Minlie Huang, Haizhou Zhao, Jingfang Xu, and Xiaoyan Zhu.
+\newblock Commonsense knowledge aware conversation generation with graph
+  attention.
+\newblock In {\em Proceedings of the Twenty-Seventh International Joint
+  Conference on Artificial Intelligence}, pages 4623--4629, 2018.
+
+\bibitem[\protect\citeauthoryear{Zhu \bgroup \em et al.\egroup
+  }{2017}]{zhu2017flexible}
+Wenya Zhu, Kaixiang Mo, Yu~Zhang, Zhangbin Zhu, Xuezheng Peng, and Qiang Yang.
+\newblock Flexible end-to-end dialogue system for knowledge grounded
+  conversation.
+\newblock {\em arXiv preprint arXiv:1709.04264}, 2017.
+
+\end{thebibliography}

@@ -1,0 +1,270 @@
+
+\section{Proof for Low-precision SGD Lower Bound}\label{sec:thm-lowerbound}
+In previous work~\cite{training-quantized-network-deeper-understanding}, there were bounds on the size of the noise ball for low-precision SGD that looked like
+\[
+  \Exv{f(w_T) - f(w^*)} = O(\delta),
+\]
+where $\delta$ is the \emph{quantization gap} of the low-precision format chosen.
+In our paper, SWALP, we found that doing weight averaging allows us to achieve something like
+\[
+  \Exv{f(w_T) - f(w^*)} = O(\delta^2).
+\] 
+which seemed to be a better convergence rate.
+In order to show that it is actually better, we would need a lower bound on the noise ball size for low-precision SGD, not just an upper bound.
+In this section, we will derive such a lower bound.
+
+\begin{lemma}
+  \label{lemmaCzbeta}
+  There exists a constant $C > 0$ independent of problem parameters such that for all $z \in \R$ and for all $\beta > 0$,
+  \[
+    \mathbb{E}_{u \sim \mathcal{N}(0,1)}\left[\left( Q(z + \beta u) - (z + \beta u) \right)^2 \right]
+    \ge
+    C \cdot \min(1, \beta).
+  \]
+  Note that here, $Q$ with no subscript refers to random quantization onto the integers (i.e. $\delta = 1$).
+\end{lemma}
+\begin{proof}
+  First, note that for any $x$, 
+  \begin{align*}
+    \Exv{ \left( Q(x) - x \right)^2 }
+    &=
+    \left( \lceil x \rceil - x \right)^2 \cdot \left( x - \lfloor x \rfloor \right)
+    +
+    \left( x - \lfloor x \rfloor \right)^2 \cdot \left( \lceil x \rceil - x \right) \\
+    &=
+    \left( \lceil x \rceil - x \right) \cdot \left( x - \lfloor x \rfloor \right) \left(
+      \left( \lceil x \rceil - x \right)
+      +
+      \left( x - \lfloor x \rfloor \right)
+    \right) \\
+    &=
+    \left( \lceil x \rceil - x \right) \cdot \left( x - \lfloor x \rfloor \right).
+  \end{align*}
+  So, we can re-write this as
+  \[
+  \mathbb{E}_{u \sim \mathcal{N}(0,1)}\left[ \left( Q(z + \beta u) - (z + \beta u) \right)^2 \right]
+    =
+    \mathbb{E}_{u \sim \mathcal{N}(0,1)}\left[ \left( \lceil z + \beta u \rceil - (z + \beta u) \right) \cdot \left( (z + \beta u) - \lfloor z + \beta u \rfloor \right) \right].
+  \]
+  Next, define the function
+  \[
+    \Phi(\beta, z)
+    =
+    \Exvud{u \sim \mathcal{N}(0,1)}{ \left( \lceil z + \beta u \rceil - (z + \beta u) \right) \cdot \left( (z + \beta u) - \lfloor z + \beta u \rfloor \right) }.
+  \]
+  Clearly, $\Phi$ is continuous.
+  It is not difficult to see that
+  \[
+    \left( \lceil x \rceil - x \right) \cdot \left( x - \lfloor x \rfloor \right)
+    \ge
+    \frac{1}{4} \sin^2(\pi x)
+    =
+    \frac{1 - \cos(2 \pi x)}{8}.
+  \]
+  Therefore,
+  \begin{align*}
+    \Phi(\beta, z)
+    &\ge 
+    \Exvud{u \sim \mathcal{N}(0,1)}{ \frac{1 - \cos(2 \pi (z + \beta u))}{8} } \\
+    &=
+    \frac{1}{8} \Exvud{u \sim \mathcal{N}(0,1)}{ 1 - \cos(2 \pi z) \cos(2 \pi \beta u) + \sin(2 \pi z) \sin(2 \pi \beta u) } \\
+    &=
+    \frac{1}{8} \Exvud{u \sim \mathcal{N}(0,1)}{ 1 - \cos(2 \pi z) \cos(2 \pi \beta u) },
+  \end{align*}
+  where the last equality holds because $\sin$ is an odd function and the standard Normal distribution is even.
+  Next, notice that
+  \begin{align*}
+    \Exvud{u \sim \mathcal{N}(0,1)}{ \cos(2 \pi \beta u) }
+    &= 
+    \Exvud{u \sim \mathcal{N}(0,1)}{ \frac{ \exp(i 2 \pi \beta u) +  \exp(-i 2 \pi \beta u) }{2} } \\
+    &=
+    \frac{ \phi_{\mathcal{N}}(2 \pi \beta) + \phi_{\mathcal{N}}(-2 \pi \beta)}{2},
+  \end{align*}
+  where $\phi_{\mathcal{N}}$ is the characteristic function of $\mathcal{N}(0,1)$, and is defined as
+  \[
+    \phi_{\mathcal{N}}(t) = \Exvud{u \sim \mathcal{N}(0,1)}{ \exp(i t u) }.
+  \]
+  The characteristic function of a standard Normal distribution is known to be
+  \[
+    \phi_{\mathcal{N}}(t) = \exp\left(-\frac{t^2}{2}\right),
+  \]
+  so
+  \begin{align*}
+    \Exvud{u \sim \mathcal{N}(0,1)}{ \cos(2 \pi \beta u) }
+    &=
+    \frac{ \exp(-2 \pi^2 \beta^2) + \exp(-2 \pi^2 \beta^2)}{2}
+    =
+    \exp(-2 \pi^2 \beta^2).
+  \end{align*}
+  Substituting this into our bound above,
+  \begin{align*}
+    \Phi(\beta, z)
+    &\ge
+    \frac{1}{8} \left( 1 - \cos(2 \pi z) \exp(-2 \pi^2 \beta^2) \right).
+  \end{align*}
+  This bound shows that $\Phi(\beta, z)$ is bounded away from zero everywhere except when $\beta = 0$ and $\cos(2 \pi z) = 1$.
+  Since this expression is periodic in $z$, it suffices to consider just the case of $z = 0$.
+  When $z = 0$, we have
+  \[
+    \Phi(\beta, 0)
+    =
+   \Exvud{u \sim \mathcal{N}(0,1)}{ \left( \lceil \beta u \rceil - \beta u \right) \cdot \left( \beta u - \lfloor \beta u \rfloor \right) }. 
+  \]
+  Expressing this as an integral, where $\psi$ is the probability density function of the standard normal distribution,
+  \[
+    \Phi(\beta, 0)
+    =
+    \int_{-\infty}^{\infty}
+    \left( \lceil \beta u \rceil - \beta u \right) \cdot \left( \beta u - \lfloor \beta u \rfloor \right)
+    \cdot \psi(u) \; du.
+  \]
+  Dividing both sides by $\beta$ and taking the limit as $\beta \rightarrow 0$,
+  \begin{align*}
+    \lim_{\beta \rightarrow 0}
+    \frac{\Phi(\beta, 0)}{\beta}
+    &=
+    \lim_{\beta \rightarrow 0}
+    \frac{1}{\beta}
+    \int_{-\infty}^{\infty}
+    \left( \lceil \beta u \rceil - \beta u \right) \cdot \left( \beta u - \lfloor \beta u \rfloor \right)
+    \cdot \psi(u) \; du \\
+    &=
+    \int_{-\infty}^{\infty}
+    \left(
+      \lim_{\beta \rightarrow 0}
+      \frac{1}{\beta} 
+      \left( \lceil \beta u \rceil - \beta u \right) \cdot \left( \beta u - \lfloor \beta u \rfloor \right)
+    \right)
+    \cdot \psi(u) \; du \\
+    &=
+    \int_{-\infty}^{\infty}
+    \Abs{u}
+    \cdot \psi(u) \; du \\
+    &=
+    \sqrt{\frac{2}{\pi}}.
+  \end{align*}
+  Here, we can interchange the limit and integral by Lebesgue's Dominated Convergence Theorem.
+  Now, since
+  \[
+    \frac{\Phi(\beta, z)}{\min(1, \beta)}
+  \]
+  is a continuous function, it follows from the extreme value theorem that it must attain its minimum value somewhere in its domain (reasoning about $z$ as living in a compact space since it is periodic, and reasoning about $\beta$ as living in a compact space with a point at infinity).
+  But we've shown that at every point in its domain, this function is positive.
+  So it follows that its minimum value must also be some number greater than zero.
+  Call this number $C$.
+  Then, it follows that
+  \[
+    \Exvud{u \sim \mathcal{N}(0,1)}{ \left( Q(z + \beta u) - (z + \beta u) \right)^2 }
+    \ge
+    C \cdot \min(1, \beta)
+  \]
+  which is what we wanted to prove.
+\end{proof}
+
+\begin{customthm}{\ref{thm:lower-bound}}\label{thm:lower-bound-appendix}
+Consider one-dimensional objective function $f(x) = \frac{1}{2}x^2$ with gradient samples $\tilde{f}'(w) = w + \sigma u$ where $u \sim \mathcal{N}(0,1)$. Compute $w_T$ recursively using the quantized SGD updating step : $w_{t+1} = Q_\delta(w_t - \alpha \tilde{f}'(w_t))$. There exists a constant $A > 0$ such that for all step size $\alpha > 0$, 
+$\lim_{T\to \infty} \mathbb{E}[w_T^2] \geq \sigma \delta A$.
+\end{customthm}
+
+\begin{proof}
+  Let $\tilde{f}'(w_t) = w_t + \sigma u_t$ where $u_t\sim \mathcal{N}(0,1)$.
+  Computing the expected value of this squared at the next time-step,
+\begin{align*}
+  \Exv{w_{t+1}^2}
+  &=
+  \Exv{ \left( Q_{\delta}\left((1 - \alpha) w_t + \alpha \sigma \tilde u_t \right) \right)^2} \\
+  &=
+  \Exv{ \left( (1 - \alpha) w_t + \alpha \sigma \tilde u_t \right)^2}
+  +
+  \Exv{ \left( Q_{\delta}\left((1 - \alpha) w_t + \alpha \sigma \tilde u_t \right) - \left((1 - \alpha) w_t + \alpha \sigma \tilde u_t \right)\right)^2} \\
+  &=
+  (1 - \alpha)^2 \Exv{ w_t^2 } + \alpha^2 \sigma^2
+  +
+  \delta^2
+  \Exv{ \left( Q\left(\frac{(1 - \alpha) w_t + \alpha \sigma \tilde u_t}{\delta} \right) - \left(\frac{(1 - \alpha) w_t + \alpha \sigma \tilde u_t}{\delta} \right)\right)^2},
+\end{align*}
+where our reduction in the last line follows because $\tilde u_t$ is a standard normal random variable and so $\Exv{\tilde u_t^2} = 1$.
+Applying Lemma~\ref{lemmaCzbeta} to bound the last term, we get
+\begin{align*}
+  \Exv{w_{t+1}^2}
+  &\ge
+  (1 - \alpha)^2 \cdot \Exv{ w_t^2 } + \alpha^2 \sigma^2
+  +
+  C \delta^2 \cdot \min\left(1, \frac{\alpha \sigma}{\delta} \right),
+\end{align*}
+Let $W$ denote the fixed point of this expression.
+Then
+\[
+  W
+  =
+  (1 - \alpha)^2 \cdot W + \alpha^2 \sigma^2
+  +
+  C \delta^2 \cdot \min\left(1, \frac{\alpha \sigma}{\delta} \right),
+\]
+and so
+\begin{align*}
+  W
+  &=
+  \frac{\alpha^2 \sigma^2}{2\alpha - \alpha^2}
+  +
+  \frac{C \delta^2}{2 \alpha - \alpha^2} \cdot \min\left(1, \frac{\alpha \sigma}{\delta} \right) \\
+  &=
+  \frac{\alpha \sigma^2}{2 - \alpha}
+  +
+  \min\left(\frac{C \delta^2}{2 \alpha - \alpha^2}, \frac{\sigma C \delta}{2 - \alpha} \right).
+\end{align*}
+If $0 < \alpha < 2$ (that is, $\alpha$ is actually small enough that the SGD is stable), then we can bound this with
+\begin{align*}
+  W
+  &\ge
+  \frac{\alpha \sigma^2}{2}
+  +
+  \min\left(\frac{C \delta^2}{2 \alpha}, \frac{\sigma C \delta}{2} \right) \\
+  &=
+  \min\left(
+    \frac{\alpha \sigma^2}{2} + \frac{C \delta^2}{2 \alpha}
+  , 
+    \frac{\alpha \sigma^2}{2} + \frac{\sigma C \delta}{2}
+  \right) \\
+  &\ge
+  \min\left(
+    \sigma \delta \sqrt{C}
+  , 
+    \frac{\sigma \delta C}{2}
+  \right),
+\end{align*}
+where this last expression comes from minimizing each of the terms individually with respect to $\alpha$, subject to $\alpha > 0$.
+If we define the problem-independent constant
+\[
+  A = \min\left(
+    \sqrt{C}
+  , 
+    \frac{C}{2}
+  \right),
+\]
+then we get
+\[
+  W \ge \sigma \delta A.
+\]
+Returning to our bound on the squares of the iterates, and subtracting the fixed point from both sides,
+\begin{align*}
+  \Exv{w_{t+1}^2 - \sigma \delta A}
+  &\ge
+  (1 - \alpha)^2 \cdot \Exv{ w_t^2 - \sigma \delta A}.
+\end{align*}
+Applying this inductively, and taking the limit, we get
+\[
+  \lim_{T \rightarrow \infty}
+  \Exv{w_T^2}
+  \ge
+  \sigma \delta A
+  =
+  O(\delta).
+\]
+
+\end{proof}
+This is a lower bound that proves we can't in general do better than $O(\delta)$ for low-precision SGD, even for strongly convex models.
+
+
+\newpage 
+

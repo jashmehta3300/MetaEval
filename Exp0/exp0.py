@@ -14,7 +14,7 @@ import json
 if __name__ == '__main__':
     paper_list = Get_Id()
 
-    Download_PDF(paper_list, "./original_pdf/")
+    # Download_PDF(paper_list, "./original_pdf/")
 
     Reviews(paper_list, './reviews/reviews.txt', 1)
 

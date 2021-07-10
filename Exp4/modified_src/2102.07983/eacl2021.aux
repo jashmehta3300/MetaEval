@@ -1,0 +1,116 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{huang2019glossbert,blevins2020moving,bevilacqua2020breaking}
+\citation{navigli2009word}
+\citation{kumar2019zero,blevins2020moving}
+\citation{postma2016more}
+\citation{miller1993semantic}
+\citation{blevins2020moving}
+\citation{raganato2017word}
+\newlabel{teaser-fig}{{1}{1}{Sample contexts (\textbf {C}) from FEWS with ambiguous words and a subset of candidate sense definitions (\textbf {S}). FEWS covers a wide range of senses, including new senses and domain-specific senses.\relax }{figure.caption.2}{}}
+\citation{raganato2017word}
+\citation{miller1993semantic}
+\citation{pradhan2007semeval,palmer2001english,snyder2004english,navigli2013semeval,moro2015semeval}
+\citation{miller1993semantic}
+\citation{pradhan2007ontonotes}
+\citation{kilgarriff2004dominant}
+\citation{postma2016more,kumar2019zero}
+\citation{meyer2011psycholinguists,matuschek2013tacl}
+\citation{mihalcea2007using,navigli2012babelnet}
+\citation{henrich2012webcage}
+\citation{segonne2019using}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{data-stats-table}{{1}{2}{FEWS data statistics. The development and test sets are balanced across senses and split evenly between few-shot examples (with support in the training set) and zero-shot examples. The extended training set (Ext. Train) adds short examples written by Wiktionary editors as additional training data.\relax }{table.caption.1}{}}
+\citation{loureiro2020neglect}
+\newlabel{sense-coverage-fig}{{2}{3}{Comparison of sense coverage for five words in the Semcor and FEWS training corpuses.\relax }{figure.caption.3}{}}
+\newlabel{dataset-analysis}{{3.2}{3}{Dataset Analysis}{subsection.3.2}{}}
+\citation{miller1993semantic}
+\citation{raganato2017word}
+\citation{miller1993semantic}
+\newlabel{eval-stats-table}{{2}{4}{The number of senses covered in the \textbf {FEWS} and \textbf {WSD Framework} evaluation sets. $\dagger $ To fairly compare against the WSD Framework, we only count few-shot examples as those have three or fewer supporting examples in their respective train set.\relax }{table.caption.4}{}}
+\newlabel{fewshot-hist}{{3}{4}{Histogram of sense frequencies in the FEWS training data.\relax }{figure.caption.6}{}}
+\newlabel{domain-wc}{{4}{4}{Word cloud of the 300 most common tags in the FEWS senses. For clarity, we manually filter out syntactic and uninformative tags.\relax }{figure.caption.8}{}}
+\citation{kilgarriff2004dominant}
+\citation{kilgarriff2000framework}
+\citation{basile2014enhanced}
+\citation{pennington2014glove}
+\citation{devlin2019bert}
+\citation{blevins2020moving}
+\newlabel{baselines-section}{{4}{5}{Baselines for FEWS}{section.4}{}}
+\newlabel{baseline-exp-setup}{{5.1}{5}{Experimental Setup}{subsection.5.1}{}}
+\citation{kingma2015adam}
+\citation{blevins2020moving}
+\citation{Wolf2019HuggingFacesTS}
+\newlabel{fews-results-table}{{3}{6}{Accuracy (\%) of our baselines (Section \ref {baselines-section}) and transfer learning models (Section \ref {transfer-section}) on the FEWS evaluation sets. Human performance ($\dagger $) is calculated on a subset of the development set and acts as an estimated upper bound on performance. \textbf {Probe$_{BERT}$} and \textbf {BEM$_{BERT}$} are baselines trained on FEWS; \textbf {BEM$_{SemCor}$} is a transfer learning model finetuned on SemCor before training on FEWS. \textbf {BEM$_{zero-shot}$} ($\ddagger $) is a zero-shot transfer experiment in which the BEM trained on SemCor is evaluated on FEWS \textit {without} finetuning on the FEWS train set.\relax }{table.caption.10}{}}
+\newlabel{human-eval-sec}{{5.3}{6}{Human Evaluation Results}{subsection.5.3}{}}
+\citation{raganato2017word}
+\citation{blevins2020moving}
+\citation{raganato2017word}
+\citation{blevins2020moving}
+\citation{raganato2017word}
+\citation{phang2018sentence}
+\citation{navigli2012babelnet}
+\citation{miller2014wordnet}
+\citation{miller1993semantic}
+\citation{pradhan2007semeval}
+\citation{palmer2001english}
+\citation{snyder2004english}
+\citation{navigli2013semeval}
+\citation{moro2015semeval}
+\newlabel{human-subset-baselines}{{4}{7}{Accuracy (\%) of our baselines on the subset of the development set manually scored by human annotators.\relax }{table.caption.18}{}}
+\newlabel{transfer-section}{{6}{7}{Transfer Learning with FEWS}{section.6}{}}
+\newlabel{semcor-results-table}{{5}{8}{F1-score on the English all-words WSD in the WSD Evaluation Framework \cite {raganato2017word}. We compare the best model from \citet {blevins2020moving} (BEM$_{BERT}$) against (1) a model first trained on FEWS and then trained on SemCor (BEM$_{FEWS}$) and (2) a model trained on FEWS and evaluated on this task without further finetuning (BEM$_{zero-shot}$).\relax }{table.caption.19}{}}
+\newlabel{semcor-lfs-table}{{6}{8}{F1-score on the MFS, LFS, and zero-shot subsets of the \textbf {ALL} evaluation set from the WSD Evaluation Framework. Zero-shot examples are the words and senses (respectively) from the evaluation suite that do not occur in SemCor.\relax }{table.caption.20}{}}
+\bibdata{anthology,eacl2021}
+\bibcite{basile2014enhanced}{{1}{2014}{{Basile et~al.}}{{Basile, Caputo, and Semeraro}}}
+\bibcite{bevilacqua2020breaking}{{2}{2020}{{Bevilacqua and Navigli}}{{}}}
+\bibcite{blevins2020moving}{{3}{2020}{{Blevins and Zettlemoyer}}{{}}}
+\bibcite{devlin2019bert}{{4}{2019}{{Devlin et~al.}}{{Devlin, Chang, Lee, and Toutanova}}}
+\bibcite{henrich2012webcage}{{5}{2012}{{Henrich et~al.}}{{Henrich, Hinrichs, and Vodolazova}}}
+\bibcite{huang2019glossbert}{{6}{2019}{{Huang et~al.}}{{Huang, Sun, Qiu, and Huang}}}
+\bibcite{kilgarriff2004dominant}{{7}{2004}{{Kilgarriff}}{{}}}
+\bibcite{kilgarriff2000framework}{{8}{2000}{{Kilgarriff and Rosenzweig}}{{}}}
+\bibcite{kingma2015adam}{{9}{2015}{{Kingma and Ba}}{{}}}
+\bibcite{kumar2019zero}{{10}{2019}{{Kumar et~al.}}{{Kumar, Jat, Saxena, and Talukdar}}}
+\bibcite{loureiro2020neglect}{{11}{2020}{{Loureiro and Camacho-Collados}}{{}}}
+\bibcite{matuschek2013tacl}{{12}{2013}{{Matuschek and Gurevych}}{{}}}
+\bibcite{meyer2011psycholinguists}{{13}{2011}{{Meyer and Gurevych}}{{}}}
+\bibcite{mihalcea2007using}{{14}{2007}{{Mihalcea}}{{}}}
+\bibcite{miller1993semantic}{{15}{1993}{{Miller et~al.}}{{Miller, Leacock, Tengi, and Bunker}}}
+\bibcite{miller2014wordnet}{{16}{2014}{{Miller and Gurevych}}{{}}}
+\bibcite{moro2015semeval}{{17}{2015}{{Moro and Navigli}}{{}}}
+\bibcite{navigli2009word}{{18}{2009}{{Navigli}}{{}}}
+\bibcite{navigli2013semeval}{{19}{2013}{{Navigli et~al.}}{{Navigli, Jurgens, and Vannella}}}
+\bibcite{navigli2012babelnet}{{20}{2012}{{Navigli and Ponzetto}}{{}}}
+\bibcite{palmer2001english}{{21}{2001}{{Palmer et~al.}}{{Palmer, Fellbaum, Cotton, Delfs, and Dang}}}
+\bibcite{pennington2014glove}{{22}{2014}{{Pennington et~al.}}{{Pennington, Socher, and Manning}}}
+\bibcite{phang2018sentence}{{23}{2018}{{Phang et~al.}}{{Phang, F{\'e}vry, and Bowman}}}
+\bibcite{postma2016more}{{24}{2016}{{Postma et~al.}}{{Postma, Bevia, and Vossen}}}
+\bibcite{pradhan2007semeval}{{25}{2007{a}}{{Pradhan et~al.}}{{Pradhan, Loper, Dligach, and Palmer}}}
+\bibcite{pradhan2007ontonotes}{{26}{2007{b}}{{Pradhan et~al.}}{{Pradhan, Hovy, Marcus, Palmer, Ramshaw, and Weischedel}}}
+\bibcite{raganato2017word}{{27}{2017}{{Raganato et~al.}}{{Raganato, Camacho-Collados, and Navigli}}}
+\bibcite{segonne2019using}{{28}{2019}{{Segonne et~al.}}{{Segonne, Candito, and Crabb{\'e}}}}
+\bibcite{snyder2004english}{{29}{2004}{{Snyder and Palmer}}{{}}}
+\bibcite{Wolf2019HuggingFacesTS}{{30}{2019}{{Wolf et~al.}}{{Wolf, Debut, Sanh, Chaumond, Delangue, Moi, Cistac, Rault, Louf, Funtowicz, and Brew}}}
+\bibstyle{acl_natbib}
+\citation{blevins2020moving}
+\newlabel{appendix-parameters}{{A}{10}{Model Hyperparameters}{appendix.A}{}}
+\newlabel{appendix-extended_train}{{B}{10}{Extended Train Baselines}{appendix.B}{}}
+\newlabel{extended-train-baselines}{{7}{11}{Accuracy of the FEWS baselines trained on the extended train set. In each group of rows, we report (1) the extended train baseline, (2) the comparable baseline trained on the standard train set, and (3) the performance delta between the two (where a positive delta indicates the extended train baseline performs better).\relax }{table.caption.25}{}}
+\gdef \@abspage@last{11}

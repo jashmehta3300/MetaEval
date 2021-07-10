@@ -1,0 +1,204 @@
+\begin{thebibliography}{29}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Black and Hunter(2012)}]{BlackH12}
+Elizabeth Black and Anthony Hunter. 2012.
+\newblock \href {https://doi.org/10.1093/logcom/exp064} {A relevance-theoretic
+  framework for constructing and deconstructing enthymemes}.
+\newblock \emph{J. Log. Comput.}, 22:55--78.
+
+\bibitem[{Botschen et~al.(2018)Botschen, Sorokin, and Gurevych}]{BotschenSG18}
+Teresa Botschen, Daniil Sorokin, and Iryna Gurevych. 2018.
+\newblock Frame- and entity-based knowledge for common-sense argumentative
+  reasoning.
+\newblock In \emph{ArgMining@EMNLP}.
+
+\bibitem[{Bowman et~al.(2015)Bowman, Angeli, Potts, and Manning}]{BowmanAPM15}
+Samuel~R. Bowman, Gabor Angeli, Christopher Potts, and Christopher~D. Manning.
+  2015.
+\newblock \href {http://arxiv.org/abs/1508.05326} {A large annotated corpus for
+  learning natural language inference}.
+\newblock \emph{CoRR}, abs/1508.05326.
+
+\bibitem[{Chen et~al.(2016)Chen, Zhu, Ling, Wei, and Jiang}]{ChenZLWJ16}
+Qian Chen, Xiaodan Zhu, Zhen{-}Hua Ling, Si~Wei, and Hui Jiang. 2016.
+\newblock \href {http://arxiv.org/abs/1609.06038} {Enhancing and combining
+  sequential and tree {LSTM} for natural language inference}.
+\newblock \emph{CoRR}, abs/1609.06038.
+
+\bibitem[{Choi and Lee(2018)}]{ChoiL18}
+HongSeok Choi and Hyunju Lee. 2018.
+\newblock \href {https://doi.org/10.18653/v1/S18-1122} {Gist at semeval-2018
+  task 12: A network transferring inference knowledge to argument reasoning
+  comprehension task}.
+\newblock In \emph{Proceedings of The 12th International Workshop on Semantic
+  Evaluation}, pages 773--777. Association for Computational Linguistics.
+
+\bibitem[{Conneau et~al.(2017)Conneau, Kiela, Schwenk, Barrault, and
+  Bordes}]{ConneauKSBB17}
+Alexis Conneau, Douwe Kiela, Holger Schwenk, Lo{\"{\i}}c Barrault, and Antoine
+  Bordes. 2017.
+\newblock \href {http://arxiv.org/abs/1705.02364} {Supervised learning of
+  universal sentence representations from natural language inference data}.
+\newblock \emph{CoRR}, abs/1705.02364.
+
+\bibitem[{Devlin et~al.(2018)Devlin, Chang, Lee, and Toutanova}]{DevlinMKK18}
+Jacob Devlin, Ming{-}Wei Chang, Kenton Lee, and Kristina Toutanova. 2018.
+\newblock \href {http://arxiv.org/abs/1810.04805} {{BERT:} pre-training of deep
+  bidirectional transformers for language understanding}.
+\newblock \emph{CoRR}, abs/1810.04805.
+
+\bibitem[{Glockner et~al.(2018)Glockner, Shwartz, and Goldberg}]{GlocknerSG18}
+Max Glockner, Vered Shwartz, and Yoav Goldberg. 2018.
+\newblock \href {http://arxiv.org/abs/1805.02266} {Breaking {NLI} systems with
+  sentences that require simple lexical inferences}.
+\newblock \emph{CoRR}, abs/1805.02266.
+
+\bibitem[{Gururangan et~al.(2018)Gururangan, Swayamdipta, Levy, Schwartz,
+  Bowman, and Smith}]{GururanganSLSBS18}
+Suchin Gururangan, Swabha Swayamdipta, Omer Levy, Roy Schwartz, Samuel~R.
+  Bowman, and Noah~A. Smith. 2018.
+\newblock \href {http://arxiv.org/abs/1803.02324} {Annotation artifacts in
+  natural language inference data}.
+\newblock \emph{CoRR}, abs/1803.02324.
+
+\bibitem[{Habernal et~al.(2014)Habernal, Eckle-Kohler, and
+  Gurevych}]{HabernalEG14}
+Ivan Habernal, Judith Eckle-Kohler, and Iryna Gurevych. 2014.
+\newblock Argumentation mining on the web from information seeking perspective.
+\newblock In \emph{ArgNLP}.
+
+\bibitem[{Habernal et~al.(2018{\natexlab{a}})Habernal, Wachsmuth, Gurevych, and
+  Stein}]{HabernalWGS17}
+Ivan Habernal, Henning Wachsmuth, Iryna Gurevych, and Benno Stein.
+  2018{\natexlab{a}}.
+\newblock \href {https://doi.org/10.18653/v1/N18-1175} {The argument reasoning
+  comprehension task: Identification and reconstruction of implicit warrants}.
+\newblock In \emph{Proceedings of the 2018 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long Papers)}, pages 1930--1940, New Orleans,
+  Louisiana. Association for Computational Linguistics.
+
+\bibitem[{Habernal et~al.(2018{\natexlab{b}})Habernal, Wachsmuth, Gurevych, and
+  Stein}]{HabernalWGS18}
+Ivan Habernal, Henning Wachsmuth, Iryna Gurevych, and Benno Stein.
+  2018{\natexlab{b}}.
+\newblock \href {https://doi.org/10.18653/v1/S18-1121} {Semeval-2018 task 12:
+  The argument reasoning comprehension task}.
+\newblock In \emph{Proceedings of The 12th International Workshop on Semantic
+  Evaluation}, pages 763--772. Association for Computational Linguistics.
+
+\bibitem[{Hochreiter and Schmidhuber(1997)}]{HochreiterS97}
+Sepp Hochreiter and J{\"u}rgen Schmidhuber. 1997.
+\newblock Long short-term memory.
+\newblock \emph{Neural computation}, 9(8):1735--1780.
+
+\bibitem[{Jia and Liang(2017)}]{JiaL17}
+Robin Jia and Percy Liang. 2017.
+\newblock \href {http://arxiv.org/abs/1707.07328} {Adversarial examples for
+  evaluating reading comprehension systems}.
+\newblock \emph{CoRR}, abs/1707.07328.
+
+\bibitem[{Jo and Bengio(2017)}]{JoB17}
+Jason Jo and Yoshua Bengio. 2017.
+\newblock \href {http://arxiv.org/abs/1711.11561} {Measuring the tendency of
+  cnns to learn surface statistical regularities}.
+\newblock \emph{CoRR}, abs/1711.11561.
+
+\bibitem[{Kingma and Ba(2014)}]{KingmaB14}
+Diederik~P. Kingma and Jimmy Ba. 2014.
+\newblock \href {http://arxiv.org/abs/1412.6980} {Adam: {A} method for
+  stochastic optimization}.
+\newblock \emph{CoRR}, abs/1412.6980.
+
+\bibitem[{Lippi and Torroni(2016)}]{LippiT16}
+Marco Lippi and Paolo Torroni. 2016.
+\newblock \href {https://doi.org/10.1145/2850417} {Argumentation mining: State
+  of the art and emerging trends}.
+\newblock \emph{ACM Trans. Internet Technol.}, 16(2):10:1--10:25.
+
+\bibitem[{McCoy et~al.(2019)McCoy, Pavlick, and Linzen}]{McCoyPL19}
+R.~Thomas McCoy, Ellie Pavlick, and Tal Linzen. 2019.
+\newblock \href {http://arxiv.org/abs/1902.01007} {Right for the wrong reasons:
+  Diagnosing syntactic heuristics in natural language inference}.
+\newblock \emph{CoRR}, abs/1902.01007.
+
+\bibitem[{Mochales and Moens(2011)}]{MochalesM11}
+Raquel Mochales and Marie-Francine Moens. 2011.
+\newblock \href {https://doi.org/10.1007/s10506-010-9104-x} {Argumentation
+  mining}.
+\newblock \emph{Artif. Intell. Law}, 19(1):1--22.
+
+\bibitem[{Niven and Kao(2018)}]{NivenK18}
+Timothy Niven and Hung-Yu Kao. 2018.
+\newblock \href {https://doi.org/10.18653/v1/S18-1185} {{NLIT}rans at
+  {S}em{E}val-2018 task 12: Transfer of semantic knowledge for argument
+  comprehension}.
+\newblock In \emph{Proceedings of The 12th International Workshop on Semantic
+  Evaluation}, pages 1099--1103, New Orleans, Louisiana. Association for
+  Computational Linguistics.
+
+\bibitem[{Pennington et~al.(2014)Pennington, Socher, and
+  Manning}]{PenningtonSM14}
+Jeffrey Pennington, Richard Socher, and Christopher~D. Manning. 2014.
+\newblock \href {http://www.aclweb.org/anthology/D14-1162} {Glove: Global
+  vectors for word representation}.
+\newblock In \emph{Empirical Methods in Natural Language Processing (EMNLP)},
+  pages 1532--1543.
+
+\bibitem[{Poliak et~al.(2018)Poliak, Naradowsky, Haldar, Rudinger, and
+  Durme}]{PoliakNHRD18}
+Adam Poliak, Jason Naradowsky, Aparajita Haldar, Rachel Rudinger, and
+  Benjamin~Van Durme. 2018.
+\newblock \href {http://arxiv.org/abs/1805.01042} {Hypothesis only baselines in
+  natural language inference}.
+\newblock \emph{CoRR}, abs/1805.01042.
+
+\bibitem[{Rajpurkar et~al.(2018)Rajpurkar, Jia, and Liang}]{RajpurkarJL18}
+Pranav Rajpurkar, Robin Jia, and Percy Liang. 2018.
+\newblock \href {http://arxiv.org/abs/1806.03822} {Know what you don't know:
+  Unanswerable questions for squad}.
+\newblock \emph{CoRR}, abs/1806.03822.
+
+\bibitem[{Sanchez et~al.(2018)Sanchez, Mitchell, and Riedel}]{SanchezMR18}
+Ivan Sanchez, Jeff Mitchell, and Sebastian Riedel. 2018.
+\newblock \href {https://doi.org/10.18653/v1/N18-1179} {Behavior analysis of
+  {NLI} models: Uncovering the influence of three factors on robustness}.
+\newblock In \emph{Proceedings of the 2018 Conference of the North {A}merican
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies, Volume 1 (Long Papers)}, pages 1975--1985, New Orleans,
+  Louisiana. Association for Computational Linguistics.
+
+\bibitem[{Srivastava et~al.(2014)Srivastava, Hinton, Krizhevsky, Sutskever, and
+  Salakhutdinov}]{SrivastavaHKSS14}
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
+  Salakhutdinov. 2014.
+\newblock \href {http://jmlr.org/papers/v15/srivastava14a.html} {Dropout: A
+  simple way to prevent neural networks from overfitting}.
+\newblock \emph{Journal of Machine Learning Research}, 15:1929--1958.
+
+\bibitem[{Toulmin(1958)}]{Toulmin58}
+Stephen~E. Toulmin. 1958.
+\newblock \emph{The Uses of Argument}.
+\newblock Cambridge University Press.
+
+\bibitem[{Walton(2005)}]{Walton05}
+Douglas~N. Walton. 2005.
+\newblock \emph{Informal logic: a handbook of critical argumentation}.
+\newblock Cambridge University Press.
+
+\bibitem[{Williams et~al.(2017)Williams, Nangia, and Bowman}]{WilliamsNB17}
+Adina Williams, Nikita Nangia, and Samuel~R. Bowman. 2017.
+\newblock \href {http://arxiv.org/abs/1704.05426} {A broad-coverage challenge
+  corpus for sentence understanding through inference}.
+\newblock \emph{CoRR}, abs/1704.05426.
+
+\bibitem[{Zhao et~al.(2018)Zhao, Liu, Liu, Zhao, and Yu}]{ZhaoLLZY18}
+Meiqian Zhao, Chunhua Liu, Lu~Liu, Yan Zhao, and Dong Yu. 2018.
+\newblock \href {https://doi.org/10.18653/v1/S18-1186} {Blcu{\_}nlp at
+  semeval-2018 task 12: An ensemble model for argument reasoning based on
+  hierarchical attention}.
+\newblock In \emph{Proceedings of The 12th International Workshop on Semantic
+  Evaluation}, pages 1104--1108. Association for Computational Linguistics.
+
+\end{thebibliography}

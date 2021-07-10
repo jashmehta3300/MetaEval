@@ -1,0 +1,139 @@
+
+\section{Proof for Theorem~\ref{thm:quadratic}}\label{sec:appendix-thm-quadratic}
+
+Here, we provide a more detailed proof of Theorem~\ref{thm:quadratic}.
+
+Consider a quadratic objective function $f(w) = (w - w^*)^T A (w - w^*) / 2$ for some $A \in \mathbb{R}^{d \times d}$ and $w^* \in \mathbb{R}^d$ is the optimal solution.
+Assume $A \succeq \mu I$, where $\mu > 0$ is the strong convexity parameter of this function.
+Suppose that we want to minimize $f$ using SWALP with gradient samples $\nabla \tilde f(w)$ that satisfy $\mathbb{E}[\nabla \tilde f(w)] = \nabla f(w) = A (w - w^*)$.
+Suppose that the variance of these samples always satisfies $\mathbb{E}[\| \nabla \tilde f(w) - \nabla f(w) \|_2^2] \le \sigma^2$ for some constant $\sigma$; this is a standard assumption used in the analysis of SGD.
+Then we can prove the following:
+
+\begin{customthm}{\ref{thm:quadratic}}
+Suppose we run SWALP under the above assumptions with a cycle length $c$ and $0 < \alpha < \frac{1}{2}\|A\|_2$.
+The expected squared distance to the optimum of SWALP's output is bounded by
+\[{
+\mathbb{E}\left[\|\bar{w}_T - w^*\|^2 \right]
+\leq
+\frac{\|w_0 - w^*\|^2}{\alpha^2\mu^2T^2} + 
+\frac{c(\alpha^2\sigma^2 + \frac{\delta^2d}{4})}{\alpha^2\mu^2T}
+}\]
+\end{customthm}
+
+\begin{proof}
+We start by rewriting the iterates of low-precision SGD as
+\begin{align*}
+    w_{t+1} &= Q_\delta(w_t - \alpha \nabla \tilde{f}(w_t)) \\
+    &= w_t - \alpha A(w_t-w^*) + \zeta_t
+\end{align*}
+where $\zeta_t$, the error term is explicitly defined as
+\begin{align*}
+    \zeta_t &= Q_\delta(w_t - \alpha \nabla \tilde{f}(w_t)) - w_t + \alpha A(w_t - w^*) \\
+    &= Q_\delta(w_t - \alpha \nabla \tilde{f}(w_t)) - w_t + \alpha A(w_t - w^*) + \alpha \nabla \tilde{f}(w_t) - \alpha \nabla \tilde{f}(w_t) \\
+    &= \alpha(A(w_t - w^*) - \nabla\tilde{f}(w_t)) + Q_\delta(w_t - \alpha \nabla \tilde{f}(w_t)) - (w_t - \alpha \nabla \tilde{f}(w_t)).
+\end{align*}
+
+We know that $\mathbb{E}[\zeta_i] = 0$ since
+\begin{align*}
+    \mathbb{E}[\zeta_t] &= \mathbb{E}[\alpha(A(w_t - w^*) - \nabla\tilde{f}(w_t)) + Q_\delta(w_t - \alpha \nabla \tilde{f}(w_t)) - (w_t - \alpha \nabla \tilde{f}(w_t))] \\
+    &=\alpha \big(A(w_t - w^*) - \mathbb{E}[\nabla\tilde{f}(w_t)]\big) + \big(\mathbb{E}[Q_\delta(w_t - \alpha \nabla \tilde{f}(w_t))] - (w_t - \alpha \nabla \tilde{f}(w_t))\big) \\
+    &= 0.
+\end{align*}
+Moreover, due to independence, we can bound the variance of $\zeta_t$ as
+\begin{align*}
+    \mathbb{E}\left[ \| \zeta_t \|^2 \right] 
+    &= 
+    \mathbb{E}\left[ \| \alpha(A(w_t - w^*) - \nabla\tilde{f}(w_t)) \|^2 \right] 
+    + 
+    \mathbb{E}\left[ \| Q_\delta(w_t - \alpha \nabla \tilde{f}(w_t)) - (w_t - \alpha \nabla \tilde{f}(w_t)) \|^2 \right] \\
+    &\leq
+    \alpha^2\sigma^2 + \frac{\delta^2 d}{4}
+\end{align*}
+where $d$ is the dimension of the solution and $\sigma$ is an upper bound for $A(w_t - w^*)$.
+Then 
+\begin{align*}
+    w_{t+1} - w^* &= w_t - w^* - \alpha A(w-w^*) + \zeta_t \\
+    &= (I-\alpha A)(w_t - w^*) + \zeta_t
+\end{align*}
+Expanding this formula we will have
+\begin{align*}
+    w_t - w^* = (I-\alpha A)^t(w_0-w^*) + \displaystyle\sum_{i=0}^{t-1} (I-\alpha A)^{t-i-1}\zeta_i
+\end{align*}
+Computing the distance from the average $\bar{w}_T$ to $w^*$, we get
+\begin{align*}
+    \bar{w}_K - w^* &= \frac{1}{K}\displaystyle\sum_{t=1}^K w_{ct} - w^* \\
+    &=\frac{1}{K}\displaystyle\sum_{t=1}^K\bigg(
+    (I-\alpha A)^{ct}(w_0-w^*) + \displaystyle\sum_{i=0}^{ct-1} (I-\alpha A)^{ct-i-1}\zeta_i
+    \bigg) \\
+    &=\frac{1}{K}\bigg(\displaystyle\sum_{t=1}^K(I-\alpha A)^{ct}\bigg)(w_0-w^*) 
+    + \frac{1}{K}\displaystyle\sum_{t=1}^K\displaystyle\sum_{i=0}^{ct-1} (I-\alpha A)^{ct-i-1}\zeta_i. \\
+\end{align*}
+Note that the first term is a constant; let that be $\chi_K$. Now analyzing the variance:
+\begin{align*}
+\mathbb{E}\left[\|\bar{w}_K - w^*\|^2\right] &= \mathbb{E}\left[
+    \left\|\chi_K + \frac{1}{K}\displaystyle\sum_{t=1}^K\displaystyle\sum_{i=0}^{ct-1} (I-\alpha A)^{ct-i-1}\zeta_i \right\|^2
+\right] \\
+&= \|\chi_K\|^2 + \mathbb{E}\left[
+    \left\|\frac{1}{K}\displaystyle\sum_{t=1}^K\displaystyle\sum_{i=0}^{ct-1} (I-\alpha A)^{ct-i-1}\zeta_i \right\|^2
+\right]
+\\&\hspace{4em}+ 
+    \frac{2}{K}\chi_K^T\displaystyle\sum_{t=1}^K\displaystyle\sum_{i=0}^{ct-1} (I-\alpha A)^{ct-i-1}\mathbb{E}[\zeta_i] \\
+&= \|\chi_K\|^2 + \mathbb{E}\left[
+    \left\|\frac{1}{K}\displaystyle\sum_{t=1}^K\displaystyle\sum_{i=0}^{ct-1} (I-\alpha A)^{ct-i-1}\zeta_i \right\|^2
+\right] \\ 
+&= \|\chi_K\|^2 + \frac{1}{K^2} \mathbb{E}\left[
+    \left\|\sum_{i=0}^{cK-1}\displaystyle\sum_{t=\lfloor i/c \rfloor + 1}^{K} (I-\alpha A)^{ct-i-1}\zeta_i \right\|^2
+\right] 
+\end{align*}
+Now leveraging the fact that the $\zeta_i$ are zero-mean and independent, we get
+\begin{align*}
+\mathbb{E}\left[\|\bar{w}_K - w^*\|^2\right]
+&= \|\chi_K\|^2 + \frac{1}{K^2} \sum_{i=0}^{cK-1} \mathbb{E}\left[
+    \left\| \sum_{t=\lfloor i/c \rfloor + 1}^{K} (I-\alpha A)^{ct-i-1}\zeta_i \right\|^2
+\right] \\
+&\leq \|\chi_K\|^2 + \frac{1}{K^2} \sum_{i=0}^{cK-1} \left\| \sum_{t=\lfloor i/c \rfloor + 1}^{K} (I-\alpha A)^{ct-i-1} \right\|_2^2 \mathbb{E}\left[
+    \left\| \zeta_i \right\|^2
+\right]  \\
+&\leq \|\chi_K\|^2 + \frac{1}{K^2} \sum_{i=0}^{cK-1} \left\| \sum_{j=0}^{\infty} (I-\alpha A)^j \right\|_2^2 \mathbb{E}\left[
+    \left\| \zeta_i \right\|^2
+\right] 
+\end{align*}
+where in the final step the inequality holds because every term in the finite sum within the norm also must appear in the infinite sum.
+Next, since $0 < \alpha < \|A\|_2/2$, we know the series sum $ \sum_{j=0}^{\infty} (I-\alpha A)^{j}$ will converge, and we have:
+\begin{align*}
+\left\| \sum_{j=0}^{\infty} (I-\alpha A)^{j} \right\|_2^2
+= 
+\left\|(I - (I-\alpha A))^{-1}\right\|_2^2 
+=
+\left\|\frac{1}{\alpha}A^{-1} \right\|_2^2
+\leq
+\frac{1}{\alpha^2\mu^2}.
+\end{align*}
+
+Putting this back we get,
+\begin{align*}
+\mathbb{E}[||\bar{w}_K - w^*||^2]
+&\leq \|\chi_K\|^2 + 
+    \frac{1}{K^2\alpha^2\mu^2} \displaystyle\sum_{i=0}^{cK-1}\mathbb{E}[\|\zeta_i\|^2]  \\
+&\leq \|\chi_K\|^2 + 
+    \frac{c}{K\alpha^2\mu^2} \left(\alpha^2\sigma^2 + \frac{\delta^2d}{4} \right).
+\end{align*}
+
+Finally, we analyze the term $\|\chi_K\|^2$, we will get
+\begin{align*}
+\|\chi_K\|^2 &= \left\|\frac{1}{K}\big(\displaystyle\sum_{t=1}^K(I-\alpha A)^{ct}\big)(w_0-w^*)\right\|^2 \\
+&\leq \frac{1}{K^2}\left\|\displaystyle\sum_{t=1}^K(I-\alpha A)^{ct}\right\|_2^2 \  \left\|w_0 -w^*\right\|^2 \\
+&\leq \frac{1}{K^2}\left\|\displaystyle\sum_{t=1}^\infty (I-\alpha A)^t\right\|_2^2 \ \left\|w_0 -w^*\right\|^2 \\
+&= \frac{1}{K^2}\left\|(I - (I - \alpha A))^{-1}\right\|_2^2 \ \left\|w_0 -w^*\right\|^2 \\
+&= \frac{1}{K^2}\left\|\frac{1}{\alpha}A^{-1}\right\|_2^2 \ \left\|w_0 -w^*\right\|^2 \\
+&\leq \frac{1}{K^2\alpha^2\mu^2} \ \left\|w_0 -w^*\right\|^2
+\end{align*}
+
+Putting this bound together, we get:
+\begin{align*}
+    \mathbb{E}[||\bar{w}_K - w^*||^2]
+&\leq \frac{1}{K^2\alpha^2\mu^2} \ \|w_0 -w^*\|^2 + 
+    \frac{c}{K\alpha^2\mu^2} \left(\alpha^2\sigma^2 + \frac{\delta^2d}{4} \right)
+\end{align*}
+which is what we wanted to show.
+\end{proof}

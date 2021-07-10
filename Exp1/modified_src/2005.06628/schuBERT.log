@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  5 JUL 2021 07:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  7 JUL 2021 21:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -646,11 +646,11 @@ Package rerunfilecheck Info: File `schuBERT.out' has not changed.
  )
 (\end occurred when \ifx on line 3 was incomplete) 
 Here is how much of TeX's memory you used:
- 15310 strings out of 478994
- 233162 string characters out of 5858184
- 631791 words of memory out of 5000000
+ 15313 strings out of 478994
+ 233186 string characters out of 5858184
+ 631795 words of memory out of 5000000
  32201 multiletter control sequences out of 15000+600000
- 437895 words of font info for 261 fonts, out of 8000000 for 9000
+ 438014 words of font info for 263 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,13n,88p,1899b,601s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texm
@@ -669,7 +669,7 @@ s/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr
 8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ./modified_src/2005.06628//schuBERT.pdf (11 pages, 335942 byt
+Output written on ./modified_src/2005.06628//schuBERT.pdf (11 pages, 335938 byt
 es).
 PDF statistics:
  626 PDF objects out of 1000 (max. 8388607)

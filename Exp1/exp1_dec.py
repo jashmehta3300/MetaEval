@@ -34,7 +34,7 @@ if __name__ == '__main__':
     ids = [i["paper_id"] for i in info]
     abs = [i["abstract"] for i in info]
 
-    no_of_shuffles = 3
+    no_of_shuffles = 1
 
     for j in range(no_of_shuffles):
 

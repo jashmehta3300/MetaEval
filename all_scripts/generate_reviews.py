@@ -52,10 +52,14 @@ def generate_review(arxivId):
         for i in range(120):
             id = driver.find_element_by_id('intro_review')
             if keep_checking(id.text):
-                intro_review = driver.find_element_by_id('intro_review')
+                html_list = driver.find_element_by_id('models')
+                items = html_list.find_elements_by_tag_name("li")
+                main_tab = items[3].find_elements_by_tag_name("a")
+                driver.execute_script("arguments[0].click();", main_tab[0])
+                absce_review = driver.find_element_by_id('absce_review')
                 print("Here is your review: ")
-                print(intro_review.text)
-                return intro_review.text
+                print("true: ", absce_review.text)
+                return absce_review.text
                 break
             else:
                 time.sleep(5)
