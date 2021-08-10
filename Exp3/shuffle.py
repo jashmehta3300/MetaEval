@@ -33,7 +33,6 @@ def shuffle_verbs(arxivId, src_path, abs):
     print("Searching files: ", files)
 
     for file in files:
-        print("Hi")
         texdoc = []
 
         f = open(file)

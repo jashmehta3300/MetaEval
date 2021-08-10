@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  9 JUL 2021 05:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  18 JUL 2021 21:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -293,7 +293,7 @@ ic/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/ti
 mes/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 Output written on ./modified_src/1901.06829//camera_ready_for_arxiv.pdf (8 page
-s, 824546 bytes).
+s, 824554 bytes).
 PDF statistics:
  202 PDF objects out of 1000 (max. 8388607)
  127 compressed objects within 2 object streams

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  7 JUL 2021 20:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  21 JUL 2021 11:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -489,6 +489,42 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+Underfull \hbox (badness 1019) in paragraph at lines 60--60
+[]\OT1/ptm/m/n/10 (+20) gradually be-come lan-guage state-of-the-art
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+\OT1/ptm/m/n/10 (+20) many mod-els com-po-nent rep-re-sen-ta-tion
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 60--60
+\OT1/ptm/m/n/10 (+20) ([][]Vaswani et al.[][], [][]2017[][]) key for a nat-u-ra
+l
+ []
+
+
+Underfull \hbox (badness 5607) in paragraph at lines 60--60
+\OT1/ptm/m/n/10 (+20) model- based var-i-ous state-of-the-art v1
+ []
+
+
+Underfull \hbox (badness 2150) in paragraph at lines 60--60
+\OT1/ptm/m/n/10 (+20) huge This num-ber pa-ram-e-ters pro-hibitive
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 60--60
+\OT1/ptm/m/n/10 (+20) ap-plied yet be such We fo-cus our other
+ []
+
+
+Underfull \hbox (badness 2608) in paragraph at lines 60--60
+\OT1/ptm/m/n/10 (+20) di-men-sions the BERT rather ar-chi-tec-ture.
+ []
+
 [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -582,48 +618,41 @@ Overfull \hbox (3.46112pt too wide) in paragraph at lines 443--455
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6]
+[6] [7]
 Underfull \hbox (badness 1596) in paragraph at lines 493--494
 []\OT1/ptm/b/n/10.95 (+20) Slanted Feed-forward Layer. \OT1/ptm/m/n/10.95 (+20)
  The fully-
  []
 
-[7]
 <hidden.pdf, id=322, 405.13547pt x 264.6255pt>
 File: hidden.pdf Graphic file (type pdf)
 <use hidden.pdf>
 Package pdftex.def Info: hidden.pdf  used on input line 504.
 (pdftex.def)             Requested size: 153.3596pt x 100.1711pt.
-[8 <./modified_src/2005.06628//hidden.pdf>] [9] (./modified_src/2005.06628//sch
-uBERT.bbl
+[8] [9
+
+ <./modified_src/2005.06628//hidden.pdf>] [10] (./modified_src/2005.06628//schu
+BERT.bbl
 Underfull \hbox (badness 3758) in paragraph at lines 56--59
 \OT1/ptm/m/n/10 (+20) level knowl-edge dis-til-la-tion.  \OT1/ptm/m/it/10 (+20)
  arXiv preprint
  []
 
+[11
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[10
 
 ])
-<heads.pdf, id=390, 392.36902pt x 264.6255pt>
+<heads.pdf, id=395, 392.36902pt x 264.6255pt>
 File: heads.pdf Graphic file (type pdf)
 <use heads.pdf>
 Package pdftex.def Info: heads.pdf  used on input line 569.
 (pdftex.def)             Requested size: 197.17616pt x 132.9827pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<key-query.pdf, id=391, 392.36902pt x 264.6255pt>
+<key-query.pdf, id=396, 392.36902pt x 264.6255pt>
 File: key-query.pdf Graphic file (type pdf)
 <use key-query.pdf>
 Package pdftex.def Info: key-query.pdf  used on input line 578.
 (pdftex.def)             Requested size: 197.17616pt x 132.9827pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<value.pdf, id=392, 392.36902pt x 264.6255pt>
+<value.pdf, id=397, 392.36902pt x 264.6255pt>
 File: value.pdf Graphic file (type pdf)
 <use value.pdf>
 Package pdftex.def Info: value.pdf  used on input line 587.
@@ -631,7 +660,7 @@ Package pdftex.def Info: value.pdf  used on input line 587.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./modified_src/2005.06628//heads.pdf> <./modified_src/2005.06628//key-quer
+[12 <./modified_src/2005.06628//heads.pdf> <./modified_src/2005.06628//key-quer
 y.pdf
 
 pdfTeX warning: pdflatex (file ./modified_src/2005.06628//key-query.pdf): PDF i
@@ -641,16 +670,19 @@ nclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./modified_src/2005.06628//value.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >] (./modified_src/2005.06628//schuBERT.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `schuBERT.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
 (\end occurred when \ifx on line 3 was incomplete) 
 Here is how much of TeX's memory you used:
- 15307 strings out of 478994
- 233135 string characters out of 5858184
- 631765 words of memory out of 5000000
+ 15302 strings out of 478994
+ 233094 string characters out of 5858184
+ 631858 words of memory out of 5000000
  32201 multiletter control sequences out of 15000+600000
- 437776 words of font info for 259 fonts, out of 8000000 for 9000
+ 437538 words of font info for 255 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,13n,88p,1899b,601s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texm
@@ -669,11 +701,11 @@ s/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr
 8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ./modified_src/2005.06628//schuBERT.pdf (11 pages, 335923 byt
+Output written on ./modified_src/2005.06628//schuBERT.pdf (12 pages, 336764 byt
 es).
 PDF statistics:
- 625 PDF objects out of 1000 (max. 8388607)
- 396 compressed objects within 4 object streams
- 86 named destinations out of 1000 (max. 500000)
+ 629 PDF objects out of 1000 (max. 8388607)
+ 399 compressed objects within 4 object streams
+ 87 named destinations out of 1000 (max. 500000)
  44063 words of extra memory for PDF output out of 51595 (max. 10000000)
 

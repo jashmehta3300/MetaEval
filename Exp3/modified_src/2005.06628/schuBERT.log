@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  9 JUL 2021 05:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  18 JUL 2021 21:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -512,7 +512,7 @@ Overfull \hbox (14.18636pt too wide) in paragraph at lines 94--106
  []
 
 [2]
-<bert_architecture2.pdf, id=138, 465.66342pt x 612.36848pt>
+<bert_architecture2.pdf, id=140, 465.66342pt x 612.36848pt>
 File: bert_architecture2.pdf Graphic file (type pdf)
 <use bert_architecture2.pdf>
 Package pdftex.def Info: bert_architecture2.pdf  used on input line 153.
@@ -521,7 +521,7 @@ Package pdftex.def Info: bert_architecture2.pdf  used on input line 153.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [3 <./modified_src/2005.06628//bert_architecture2.pdf>]
-<bert_architecture_2.pdf, id=190, 954.1254pt x 999.99084pt>
+<bert_architecture_2.pdf, id=192, 954.1254pt x 999.99084pt>
 File: bert_architecture_2.pdf Graphic file (type pdf)
 <use bert_architecture_2.pdf>
 Package pdftex.def Info: bert_architecture_2.pdf  used on input line 200.
@@ -657,11 +657,11 @@ Package rerunfilecheck Info: File `schuBERT.out' has not changed.
  )
 (\end occurred when \ifx on line 3 was incomplete) 
 Here is how much of TeX's memory you used:
- 15327 strings out of 478994
- 233328 string characters out of 5858184
- 631810 words of memory out of 5000000
+ 15331 strings out of 478994
+ 233358 string characters out of 5858184
+ 631676 words of memory out of 5000000
  32203 multiletter control sequences out of 15000+600000
- 439985 words of font info for 271 fonts, out of 8000000 for 9000
+ 440170 words of font info for 274 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,13n,88p,1899b,601s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texm
@@ -680,7 +680,7 @@ s/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/courier/ucrr
 8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/t
 exlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ./modified_src/2005.06628//schuBERT.pdf (11 pages, 336427 byt
+Output written on ./modified_src/2005.06628//schuBERT.pdf (11 pages, 336424 byt
 es).
 PDF statistics:
  621 PDF objects out of 1000 (max. 8388607)

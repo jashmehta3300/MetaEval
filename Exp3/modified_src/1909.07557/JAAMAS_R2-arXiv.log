@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  9 JUL 2021 05:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  18 JUL 2021 21:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -772,11 +772,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  15074 strings out of 478994
  293497 string characters out of 5858184
- 619107 words of memory out of 5000000
+ 619109 words of memory out of 5000000
  32301 multiletter control sequences out of 15000+600000
  414827 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,23n,89p,1319b,904s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,23n,89p,1322b,904s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><
@@ -801,7 +801,7 @@ ist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti9.pfb>
 Output written on ./modified_src/1909.07557//JAAMAS_R2-arXiv.pdf (34 pages, 435
-772 bytes).
+690 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  148 compressed objects within 2 object streams

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  9 JUL 2021 05:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.6.16)  18 JUL 2021 21:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -453,7 +453,7 @@ File: figures/domain-wc.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/domain-wc.pdf  used on input line 216.
 (pdftex.def)             Requested size: 153.3596pt x 153.35281pt.
 
-Underfull \vbox (badness 1173) has occurred while \output is active []
+Underfull \vbox (badness 5832) has occurred while \output is active []
 
 [4 <./modified_src/2102.07983//figures/train-hist.pdf> <./modified_src/2102.079
 83//figures/domain-wc.pdf
@@ -476,11 +476,11 @@ Package rerunfilecheck Info: File `eacl2021.out' has not changed.
  )
 (\end occurred when \ifx on line 17 was incomplete) 
 Here is how much of TeX's memory you used:
- 13452 strings out of 478994
- 204101 string characters out of 5858184
- 545610 words of memory out of 5000000
+ 13455 strings out of 478994
+ 204128 string characters out of 5858184
+ 544552 words of memory out of 5000000
  30118 multiletter control sequences out of 15000+600000
- 462287 words of font info for 435 fonts, out of 8000000 for 9000
+ 462406 words of font info for 437 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,12n,88p,1338b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/tex
@@ -498,7 +498,7 @@ nts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/cour
 ier/ucrr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ./modified_src/2102.07983//eacl2021.pdf (11 pages, 1840300 by
+Output written on ./modified_src/2102.07983//eacl2021.pdf (11 pages, 1840252 by
 tes).
 PDF statistics:
  481 PDF objects out of 1000 (max. 8388607)
